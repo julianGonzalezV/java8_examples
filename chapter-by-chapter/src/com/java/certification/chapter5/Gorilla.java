@@ -1,0 +1,12 @@
+package com.java.certification.chapter5;
+public class Gorilla extends Animal{
+    private String prop1;
+    public Gorilla(int age) {
+        super(5);
+        prop1 = "";
+    }
+    public Gorilla() {
+        super(5);
+
+    }
+}
