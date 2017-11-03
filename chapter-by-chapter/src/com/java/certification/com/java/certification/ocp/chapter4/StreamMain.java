@@ -1,9 +1,9 @@
 package com.java.certification.com.java.certification.ocp.chapter4;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamMain {
@@ -72,7 +72,7 @@ public class StreamMain {
         //The reduce() method combines a stream into a single object
         // lo siguiente en declarativa sería como un form normal y concatenando en una variable
         Stream<String> stream = Stream.of("w", "o", "l", "f");
-        String word = stream.reduce("", (s, c) -> s + c);
+        String word = stream.reduce("", (x, y) -> x + y);
         System.out.println(word);// wolf
 
 
@@ -81,9 +81,113 @@ public class StreamMain {
         Stream<String> stream1 = Stream.of("w", "o", "l", "f");
         String word2 = stream1.reduce("", String::concat);
         System.out.println(word2);// wolf
-
         Stream<Integer> stream2 = Stream.of(3, 5, 6);
         System.out.println(stream2.reduce(1, (a, b) -> a*b));
+
+        System.out.println("::::::::::::::::::.reduce2:::::::::::::::::::::.");
+        BinaryOperator<Integer> op = (a, b) -> a * b;
+        Stream<Integer> empty = Stream.empty();
+        Stream<Integer> oneElement = Stream.of(3);
+        Stream<Integer> threeElements = Stream.of(3, 5, 6);
+        Optional<Integer> opt1 = empty.reduce(op); // no output
+        opt1.ifPresent(System.out::println);// no output
+        oneElement.reduce(op).ifPresent(System.out::println); // 3
+        threeElements.reduce(op).ifPresent(System.out::println); // 90
+
+
+        System.out.println("::::::::::::::::::.reduce in a parallel way:::::::::::::::::::::.");
+        BinaryOperator<Integer> ope = (a, b) -> a * b;
+        Stream<Integer> streamP = Stream.of(3, 5, 6);
+        System.out.println(streamP.reduce(1, ope, ope)); // 90
+
+
+
+        System.out.println("::::::::::::::::::.Collect in a parallel way:::::::::::::::::::::.");
+        //muy importante porque nos permite sacar los datos del stream, en la estructura que necesitemos
+        Stream<String> streamCl = Stream.of("w", "o", "l", "f");
+        //Sí miramos la firma de la funcion collect vemos que los BiConsumer serían los StringBuilder
+        StringBuilder wordCl = streamCl.collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
+        System.out.println(wordCl);
+
+
+
+        // En el caso anterior note como el orden no interesa, ahora si lo que se desea es un orden,
+        //el treeSet nos lo ofrece
+        Stream<String> streamTs = Stream.of("w", "o", "l", "f");
+        TreeSet<String> set = streamTs.collect(TreeSet::new, TreeSet::add,TreeSet::addAll);
+        System.out.println(set); // [f, l, o, w]
+
+
+        //otra forma de escribirlo es:
+        Stream<String> streamTs2 = Stream.of("w", "o", "l", "f");
+        //sacando los datos del Stream
+        TreeSet<String> set2 = streamTs2.collect(Collectors.toCollection(TreeSet::new));
+        System.out.println(set2); // [f, l, o, w]
+
+
+        //If we didn’t need the set to be sorted, we could make the code even shorter:
+        Stream<String> streamTs3 = Stream.of("w", "o", "l", "f");
+        Set<String> set3 = streamTs3.collect(Collectors.toSet());
+        System.out.println(set3); // [f, w, l, o]
+
+
+
+        System.out.println("::::::::::::::::::.FILTER:::::::::::::::::::::.");
+        // filter :  Stream<T> filter(Predicate<? super T> predicate)
+        //Retorna otro Stream con los datos seleccionados en el filter
+        Stream<String> sF = Stream.of("monkey", "gorilla", "bonobo");
+        sF.filter(x -> x.startsWith("m")).forEach(System.out::println);// monkey
+
+        /* hacer el de ordenar
+        Stream<Integer> sI = Stream.of(5,4,1,3,2);
+        sI.filter((x,y) -> (x - y).forEach(System.out::println);*/
+
+        System.out.println();
+        System.out.println("::::::::::::::::::.DISTINCT:::::::::::::::::::::.");
+        //elimina los duplicados
+        Stream<String> sD = Stream.of("duck", "duck", "duck", "goose");
+        sD.distinct().forEach(System.out::println); // duckgoose
+
+
+        System.out.println();
+        System.out.println("::::::::::::::::.SKIP AND LIMIT:::::::::::::::::.");
+        Stream<Integer> sSL = Stream.iterate(1, n -> n + 1);
+        sSL.skip(5).limit(2).forEach(System.out::print);// 67
+
+        System.out.println();
+        System.out.println("::::::::::::::::.MAP:::::::::::::::::.");
+        //The map() method on streams is for transforming data
+        Stream<String> sM = Stream.of("monkey", "gorilla", "bonobo");
+        sM.map(String::length).forEach(System.out::print);// 676
+        //String::length is shorthand for the lambda x -> x.length()
+
+        System.out.println();
+        System.out.println("::::::::::::::::. flatMap():::::::::::::::::.");
+
+        List<String> zero = Arrays.asList();
+        List<String> one = Arrays.asList("Bonobo");
+        List<String> two = Arrays.asList("Mama Gorilla", "Baby Gorilla");
+        Stream<List<String>> animals = Stream.of(zero, one, two);
+        animals.flatMap(l -> l.stream()).forEach(System.out::println);
+
+
+        System.out.println();
+        System.out.println("::::::::::::::::. sorted():::::::::::::::::.");
+        Stream<String> sSort = Stream.of("brown-", "bear-");
+        sSort.sorted().forEach(System.out::print); // bear-brown-
+
+
+        Stream<String> sSort2 = Stream.of("brown bear-", "grizzly-");
+        sSort2.sorted(Comparator.reverseOrder()).forEach(System.out::print); // grizzly-brown bear-
+
+        System.out.println();
+        System.out.println("::::::::::::::::. peek:::::::::::::::::.");
+        //peek lo que hace es
+
+        Stream<String> streamPeek = Stream.of("black bear", "brown bear", "grizzly");
+        long count = streamPeek.filter(elem -> elem.startsWith("g")).peek(System.out::println).count();
+        System.out.println(count);
+
 
     }
 
