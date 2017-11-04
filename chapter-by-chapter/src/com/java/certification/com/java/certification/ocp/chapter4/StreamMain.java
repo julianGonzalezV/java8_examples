@@ -176,17 +176,34 @@ public class StreamMain {
         Stream<String> sSort = Stream.of("brown-", "bear-");
         sSort.sorted().forEach(System.out::print); // bear-brown-
 
-
+        //De igual forma si lo que necesitamos es un ordenamiento personalizado
+        //entonces hacemos uso del comparator
         Stream<String> sSort2 = Stream.of("brown bear-", "grizzly-");
         sSort2.sorted(Comparator.reverseOrder()).forEach(System.out::print); // grizzly-brown bear-
 
         System.out.println();
         System.out.println("::::::::::::::::. peek:::::::::::::::::.");
-        //peek lo que hace es
 
         Stream<String> streamPeek = Stream.of("black bear", "brown bear", "grizzly");
-        long count = streamPeek.filter(elem -> elem.startsWith("g")).peek(System.out::println).count();
+        //Acá el resultado se guarda en count ..pero que pasaría si desearamos
+        // conocer el motivo por qel cual coutn da 1 o 2 ..etc
+        // Allí es donde estra a jugar la función PEEK lo que hace es
+        long count = streamPeek.filter(elem -> elem.startsWith("b")).peek(System.out::println).count();
         System.out.println(count);
+
+
+        //Streams allow you to use chaining and express what you want to accomplish rather than
+        //how to do so.
+
+        //EJERCICIOS::::
+
+        /*dado un listado de nombres se debe obtener solo los 2 primeros
+         en donde el tamño del nombre sea de 4 caracteres, además deben estar ordenados
+         elfabeticamente
+        Ejemplo: el siguiente listado como entrada ("Toby", "Anna", "Leroy", "Alex")
+        debe retornar ("Alex", "Anna")
+        */
+
 
 
     }
