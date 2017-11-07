@@ -203,6 +203,9 @@ public class StreamMain {
         Ejemplo: el siguiente listado como entrada ("Toby", "Anna", "Leroy", "Alex")
         debe retornar ("Alex", "Anna")
         */
+        System.out.println("EJERCICIOS1::::");
+        Stream<String> namesExample1 = Stream.of("Toby", "Anna", "Leroy", "Alex");
+        namesExample1.filter(x -> x.length() < 5).limit(2).sorted().forEach(System.out::println);
 
 
 
