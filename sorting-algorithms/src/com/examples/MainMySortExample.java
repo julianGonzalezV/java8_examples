@@ -9,7 +9,6 @@ import java.util.List;
 public class MainMySortExample {
     public static void main(String... args){
        SortingTest1 test1 = new SortingTest1(Arrays.asList(4, 3, 2, 1));
-        /*test1.sortElems();*/
 
         LinkedList<Integer> l1 = new LinkedList();
         l1.add(5);
@@ -17,7 +16,6 @@ public class MainMySortExample {
         l1.add(3);
         l1.add(2);
         l1.add(2);
-        //System.out.println(l1);
 
 
         List<Double> l2 = new ArrayList();
@@ -31,11 +29,9 @@ public class MainMySortExample {
         l2.add(0.12);
         l2.add(0.23);
         l2.add(0.68);
-        //System.out.println(l2);
 
         //test1.bucketSort(l2);
-
-        test1.bucketSort(l2);
+        test1.insertionSort(l2);
 
 
     }

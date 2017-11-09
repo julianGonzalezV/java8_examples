@@ -35,7 +35,10 @@ public class SortingTest1 {
 
 
     /**
-     *
+     * Ojo la multimplicacoin por n o tamnio de la lista aplica para el caso de decimales
+     * quizas para elementos > 1 no sea multiplicando porque imagine que hay 10 buckets
+     * porque solo hay elementos del 1-9  y usted multiplica 9*10, ose que dería que debe alojar el elemento en
+     * la posicion 90 de getBuckets, pero el bucketArray quedó de 10 en tamanio
      * @param unsortedElems
      * @return
      */
@@ -44,16 +47,14 @@ public class SortingTest1 {
         int n = unsortedElems.size();
         List<List<Double>> buckets =  getBuckets(n);
         for (Double elem : unsortedElems) {
-            System.out.println(elem);
+            //bi es la canasta en donde llegaran los elementos seleccionados, dependiendo de la
+            //operacion
             Double bi = Math.floor(n * elem);
             buckets.get(bi.intValue()).add(elem);
         }
+        List<Double> resultList = buckets.stream().map(x -> insertionSort(x)).collect(ArrayList::new, List::addAll, List::addAll);
 
-        Stream<List<Double>> stream = buckets.stream();
-        Stream<List<Double>> stream2 = stream.map(x -> insertionSort(x));
-        //stream2.reduce(List<Double>(), )
-
-        System.out.println(buckets);
+        System.out.println(resultList);
         return null;
     }
 
