@@ -4,6 +4,7 @@ import java.util.*;
 import java.util.function.BinaryOperator;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class StreamMain {
@@ -205,10 +206,21 @@ public class StreamMain {
         */
         System.out.println("EJERCICIOS1::::");
         Stream<String> namesExample1 = Stream.of("Toby", "Anna", "Leroy", "Alex");
-        namesExample1.filter(x -> x.length() < 5).limit(2).sorted().forEach(System.out::println);
+        namesExample1.filter(x-> x.length() < 5).sorted().limit(2).forEach(System.out::println);
+
+        System.out.println("EJERCICIOS2:::: Dado una lista de numeros entonces obtener solo aquellos que son primos");
+        IntStream.range(2, 100).filter(x-> isPrime(x)).forEach(System.out::println);
 
 
 
+    }
+
+    /**
+     *
+     * @param n
+     */
+    private static boolean isPrime(int n){
+         return IntStream.range(2, n).filter(x-> n%x == 0).count()<1;
     }
 
 }
