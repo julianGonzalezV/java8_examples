@@ -8,9 +8,12 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'io.spring.dependency-management'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'application'
+
 
 jar {
     baseName = 'gs-spring-boot'
@@ -23,6 +26,7 @@ repositories {
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+mainClassName = 'com.java.vp.training'
 
 dependencies {
     // tag::jetty[]
@@ -37,3 +41,11 @@ dependencies {
     testCompile("junit:junit")
     testCompile("org.springframework.boot:spring-boot-starter-test")
 }
+
+
+
+bootRun{
+    mainClassName = 'com.java.vp.training.MyApp01'
+}
+
+
