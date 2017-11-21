@@ -212,6 +212,20 @@ public class StreamMain {
         IntStream.range(2, 100).filter(x-> isPrime(x)).forEach(System.out::println);
 
 
+        System.out.println("EJERCICIOS2:::: FLATmAP");
+        /*
+        ,¿Cómo funciona exactamente flatMap? . FlatMap es una función que recibe una entrada
+        y devuelve varias salidas para esa entrada . Esa es la diferencia con Map que tiene una entrada
+        y devuelve una única salida. En este caso hemos convertido el array en un stream.
+
+         */
+
+
+        Stream<String> namesExample2 = Stream.of("www.google.com.co", "application.device", "frank.d.cardona", "192.168.10.12");
+        String[] arrTest =  namesExample2.flatMap(x-> Stream.of(x.split("\\."))).toArray(size->new String[size]);
+        Stream.of(arrTest).forEach(System.out::print);
+
+
 
     }
 

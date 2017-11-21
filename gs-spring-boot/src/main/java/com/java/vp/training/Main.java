@@ -41,10 +41,19 @@ public class Main {
 
         //estudiar spring boot
 
-        //collect permite definir funciones pque me trasnforme el resultado que deseee
+        //collect permite definir funciones que trasnformen el resultado que deseee
         //VER COLLECT examples
         //
 
 
+        //flatMap : es como tener una colección de colecciones
+
+
+
+        //Sección2:::::::::::::::::::::..2017-11-20:::::::::::::::::::::::::::::
+
+        //de clases interfaces anónimas a sam lambda
+
+        //spring shell permite añadir una linea de comandos
     }
 }

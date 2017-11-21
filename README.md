@@ -1,6 +1,11 @@
 # java8_cert
 selft study repo
 
+vpcmobile
+VPC#Guest2017
+
+VPC-CODINGCLUB
+VPC#coding2017
 
 Aditions in Java8:
 using lambdas for the Comparator implementation
@@ -84,5 +89,7 @@ cats.forEach(c -> System.out.println(c));
 ::::::::::::::...Using New Java 8 Map APIs::::::::::::::::::::::::
 
 
+::::::::::::::INICIO :::CHAPTER 7 Concurrency::::::::::::::::::::::::::::::::::::::::::::::::
+A thread is the smallest unit of execution that can be scheduled by the operating system
 
-
+::::::::::::::FIN :::CHAPTER 7 Concurrency::::::::::::::::::::::::::::::::::::::::::::::::
