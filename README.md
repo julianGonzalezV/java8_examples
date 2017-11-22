@@ -1,4 +1,4 @@
-# java8_cert
+# java8_examples
 selft study repo
 
 vpcmobile
@@ -91,5 +91,17 @@ cats.forEach(c -> System.out.println(c));
 
 ::::::::::::::INICIO :::CHAPTER 7 Concurrency::::::::::::::::::::::::::::::::::::::::::::::::
 A thread is the smallest unit of execution that can be scheduled by the operating system
+
+The Runnable interface is commonly used to define the work a thread will execute
+
+Java8 strongly encourages developers to use the
+Concurrency API to create and manage Thread objects for them
+
+ExecutorService : performs
+thread tasks without having to create Thread objects directly
+
+
+
+
 
 ::::::::::::::FIN :::CHAPTER 7 Concurrency::::::::::::::::::::::::::::::::::::::::::::::::
