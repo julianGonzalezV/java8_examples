@@ -1,6 +1,6 @@
 package com.java.certification.com.java.certification.ocp.chapter4;
 
-import com.java.certification.data.Person;
+//import com.java.certification.data.Person;
 
 import java.util.Arrays;
 import java.util.List;
@@ -11,6 +11,7 @@ import java.util.List;
 public class ReduceExamples {
 
     public static void  main(String... args){
+        /*
         List<Person> persons = Arrays.asList(
                 new Person("Max", 18),
                 new Person("Peter", 23),
@@ -30,5 +31,6 @@ public class ReduceExamples {
                                     sum1, sum2, Thread.currentThread().getName());
                             return sum1 + sum2;
                         });
+        */
     }
 }
