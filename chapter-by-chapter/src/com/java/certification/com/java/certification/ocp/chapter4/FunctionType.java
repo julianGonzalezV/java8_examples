@@ -6,6 +6,7 @@ import java.util.function.Function;
 
 /**
  * Created by juligove on 2017/11/27.
+ * Explicacion del FunctionType
  */
 public class FunctionType {
     public static void  main(String... args){
