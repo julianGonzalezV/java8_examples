@@ -8,6 +8,7 @@ public class FunctionTypeTest {
 
     @Test
     public void testHelloWorld(){
+
         assertEquals(2, 1+1, "message");
     }
 }
