@@ -1,4 +1,4 @@
-package co.book.chapter4;
+package co.book.chapter4.functional.interfaces;
 
 import java.util.function.BiFunction;
 import java.util.function.Function;

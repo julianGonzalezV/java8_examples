@@ -1,4 +1,4 @@
-package co.book.chapter4;
+package co.book.chapter4.functional.operations;
 
 import java.util.function.BinaryOperator;
 import java.util.function.UnaryOperator;
