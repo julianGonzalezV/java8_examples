@@ -80,12 +80,30 @@ public class FunctionTypeTest {
 
     @Test
     @DisplayName("Ejemplo de DoubleToIntFunction")
-
     void doubleToIntFunctionCase1(){
         double[] input = {2.1, 3.4, 4.0};
         List<Integer> result =FunctionType.doubleToIntFunction(x-> (int) Math.ceil(x),input);
         assertThat(result.get(1), is(4));
 
+    }
+
+    @Test
+    @DisplayName("Two-Arity Function Specializations ----> BiFunction")
+    void biFunctionCase(){
+        assert false;
+    }
+
+    @Test
+    @DisplayName("Two-Arity Function Specializations ----> supplier")
+    void suppliersCase(){
+        assert false;
+    }
+
+
+    @Test
+    @DisplayName("Two-Arity Function Specializations ----> consumer")
+    void consumerCase(){
+        assert false;
     }
 
 }
