@@ -22,28 +22,11 @@ repositories {
     mavenCentral()
 }
 
-junitPlatform {
-    // platformVersion '1.0.2'
-    filters {
-        engines {
-            // include 'junit-jupiter', 'junit-vintage'
-            // exclude 'custom-engine'
-        }
-        tags {
-            // include 'fast'
-            exclude 'slow'
-        }
-        // includeClassNamePattern '.*Test'
-    }
-    // enableStandardTestTask true
-    // reportsDir file('build/test-results/junit-platform') // this is the default
-    logManager 'org.apache.logging.log4j.jul.LogManager'
-}
-
 
 
 dependencies {
     testCompile("org.junit.jupiter:junit-jupiter-api:5.0.2")
     testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.2")
+    testCompile('org.hamcrest:hamcrest-library:1.3')
 }
 
