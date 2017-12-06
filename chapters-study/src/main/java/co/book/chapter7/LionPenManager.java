@@ -19,6 +19,7 @@ public class LionPenManager {
     public void performTask(CyclicBarrier c1, CyclicBarrier c2) {
         try {
             removeAnimals();
+            //al aplicar wait acá el sistema espera hasta qeu el ultimo thread ejecute esta tarea
             c1.await();
             cleanPen();
             c2.await();
@@ -32,6 +33,8 @@ public class LionPenManager {
         ExecutorService service = null;
         try {
             service = Executors.newFixedThreadPool(4);
+            //IMPORTANTE: se debe asegurar que el pool de hilos sea por lo menos del mismo tamaño de
+            //la cantidad CyclicBarrier si le mermamos a se puede estar colgandp
             LionPenManager manager = new LionPenManager();
             CyclicBarrier c1 = new CyclicBarrier(4);
             CyclicBarrier c2 = new CyclicBarrier(4,
@@ -41,7 +44,7 @@ public class LionPenManager {
                 //service.submit(() -> manager.performTask());//con esta no era seguro porque existe la posibilidad que al estar
                 //un zookeper limpiando adicionen un animal con el adentro :)
 
-                //Ahora si con esta implementacio estamos seguros que ya todos limpiaron y ahora SI se puede iniciar a
+                //Ahora si con esta implementaciÓN estamos seguros que ya todos limpiaron y ahora SI se puede iniciar a
                 //meter animales O QUE ENTREN A LIMPIAR Y ESTÉ EL ANIMCAL ALLÍ :)
                 service.submit(() -> manager.performTask(c1 , c2));
 
