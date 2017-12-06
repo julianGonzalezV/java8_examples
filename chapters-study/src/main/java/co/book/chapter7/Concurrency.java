@@ -1,7 +1,12 @@
 package co.book.chapter7;
 
+import java.util.concurrent.ConcurrentMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toConcurrentMap;
 
 public class Concurrency {
 
@@ -52,7 +57,16 @@ Printing zoo inventory
 
     }
 
-    public static void  main(String... args){
-        threadExecutor1();
+
+    /**
+     *
+     * @param vals
+     * @return
+     */
+    public static ConcurrentMap<Integer, String> getMapFromLengthKeyToValStr(String... vals){
+        ConcurrentMap<Integer, String> map1 = Stream.of(vals).parallel().collect(toConcurrentMap(String::length, k -> k,(s1, s2) -> s1 + "," + s2));
+        return Stream.of(vals).parallel().collect(toConcurrentMap(String::length, k -> k,(s1, s2) -> s1 + "," + s2));
     }
+
+
 }
