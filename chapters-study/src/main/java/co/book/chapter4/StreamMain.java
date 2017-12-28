@@ -9,9 +9,20 @@ import java.util.stream.Stream;
 
 public class StreamMain {
 
+
+    static String findNumber(int[] arr, int k) {
+        System.out.println("entra1");
+
+       return Arrays.stream(arr).filter(x-> x == k).toArray().length > 0? "Y":"N";
+    }
+
+
+
     //NOTA LLEVAR ESTOS CASOS QUE TEST DE PRUEBAS PARA EJEMPLIFICARLOS MEJOR
 
     public static void  main(String... args){
+        int[] arr ={1, 2, 5};
+        System.out.println(findNumber(arr, 7));
 
         //example1, ejemplo de streams infinitos, llamar count en uno de estos se queda forever count
         Stream<Double> randoms = Stream.generate(Math::random);
