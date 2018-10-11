@@ -7,7 +7,7 @@ Anotaciones:
 @EnableAutoConfiguration: Carga la configuracion basada en las dependencias especificadas
 
 @SpringBootApplication: This annotation is equivalent to using @Configuration, @EnableAutoConfiguration and @ComponentScan
-es la anotacion que se coloca en la clase inicial ege
+es la anotacion que se coloca en la clase inicial eg
 
  public static void main(String[] args) {
         SpringApplication.run(MyApp01.class, args);
