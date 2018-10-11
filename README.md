@@ -1,6 +1,18 @@
 # java8_examples
 selft study repo
 
+
+:::::::::::::::::::::::::::::
+
+== : for checking primitives or if two variables refer to the same objects
+Equals: For checking if two objects are equivalent, depending on the overriding establish by the developer
+
+
+MEMBER INNER class: Into a class at the same level as a methods
+
+::::::::::::::::::::::::::::::::
+
+
 vpcmobile
 VPC#Guest2017
 
