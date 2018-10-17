@@ -2,6 +2,7 @@ package co.book.data_structure;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class MainDataStructure {
@@ -221,7 +222,49 @@ public class MainDataStructure {
         System.out.println(numbers31);
 
 
+        /**
+         * Converting Between array and List
+         */
+        List<String> conv1 = new ArrayList<>();
+        conv1.add("hawk");
+        conv1.add("robin");
+        System.out.println("conv1 list: "+conv1);
+        Object[] objectArray = conv1.toArray();//lo lleva a array de objetos
+        System.out.println(objectArray.length); // 2
+        String[] stringArray = conv1.toArray(new String[0]);//la idea de decir que es un array de 0 es
+        // que java cree el array con el tamanio correcto en este caso 2, si el tamanoi que le digamos coincide se retorna ése
+        //array sin el que se ajuste es retornado
+        System.out.println(stringArray.length); // 2
 
+        /**
+         * Converting from an array to a List is more interesting.
+         */
+
+        String[] array = { "hawk", "robin" }; // [hawk, robin]
+        List<String> list11 = Arrays.asList(array); // returns fixed size list
+        System.out.println(list11.size()); // 2
+        list11.set(1, "test"); // [hawk, test], note como los cambios en list11 afectan el array, están ligadas por memoria
+        //si esto no es lo que desea pruebe creando una copia
+        array[0] = "new"; // [new, test]
+        for (String b : array) System.out.println(b + " - "); // new test
+        //list11.remove(1); // throws UnsupportedOperation Exception, no funciona porque es un fi xed-size list
+
+        /**
+         * Sorting an ArrayList
+         */
+
+        List<Integer> numbers11 = new ArrayList<>();
+        numbers11.add(99);
+        numbers11.add(5);
+        numbers11.add(81);
+        Collections.sort(numbers11);
+        System.out.println(numbers11);// [5, 81, 99]
+
+
+        /**
+         *
+         * PARA EL RESTO DE ESTURCTURAS VER CARPETA CHAPTER3
+         */
 
     }
 
