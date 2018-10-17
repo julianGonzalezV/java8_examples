@@ -1,0 +1,35 @@
+JPA specification: 
+
+http://docs.jboss.org/hibernate/orm/5.2/userguide/html_single/Hibernate_User_Guide.html
+
+ORM:Object/Relational Mapping 
+
+With JDBC we spent a lot of time with manual data handling things like managing the conection, 
+
+Hibernate may not be the best solution for data-centric applications that only use stored-procedures to implement the business logic in the database
+some anotations can be ignored  fro rxample  @Basic , but no @Id
+
+It offers a variaty of anotations for specific requirements
+
+@Basic :
+
+@Columnd: 
+
+@Where
+
+
+In the hibernate web page we can find a lot of examples 
+
+
+3.1. JPA Bootstrapping:
+
+
+HQL  JPQL similares uno con anotationsan the other using methos from Query/typeQuery and  entityManager.createQuery( class
+
+Criteria: Is considered like a safe way of represent a query in java it allows to wite the query in a spllitted way 
+example
+Criteria.select
+Criteria.where
+
+
+18 Spatial: geographic data
