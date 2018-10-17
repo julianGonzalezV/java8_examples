@@ -35,9 +35,9 @@ public class Main {
 
         //SPRING BOOT
 
-        //@RESTCONTROLLER érmite levantar un ser
+        //@RESTCONTROLLER érmite levantar un servicio
 
-        //supliers no reciben parámetros pero si devuelve un valor
+        //suppliers no reciben parámetros pero si devuelve un valor
 
         //estudiar spring boot
 
