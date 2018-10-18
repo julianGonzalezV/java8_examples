@@ -263,7 +263,7 @@ public class MainDataStructure {
 
         /**
          *
-         * PARA EL RESTO DE ESTURCTURAS VER CARPETA CHAPTER3
+         * PARA EL RESTO DE ESTRUCTURAS VER CARPETA CHAPTER3
          */
 
     }
