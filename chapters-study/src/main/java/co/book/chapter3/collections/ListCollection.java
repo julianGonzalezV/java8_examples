@@ -10,6 +10,16 @@ public class ListCollection {
         list.add("pandas");
         list.add("zebras");
         list.add("lions");
+        list.add("pandas");
+        return list;
+    }
+
+    private static List listNumbers(){
+        List<Integer> list = new ArrayList<>();
+        list.add(77);
+        list.add(10);
+        list.add(77);
+        list.add(8);
         return list;
     }
 
@@ -70,6 +80,7 @@ public class ListCollection {
         /**
          * Using the List Interface
          */
-        System.out.println(listZoo());
+        System.out.println("Strings: "+listZoo());
+        System.out.println("Numbers: "+ listNumbers()); // again, It sorts based on the inserted order
     }
 }
