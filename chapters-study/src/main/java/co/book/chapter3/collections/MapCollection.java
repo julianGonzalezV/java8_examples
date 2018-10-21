@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.TreeMap;
+import java.util.stream.Stream;
 
 /** .:::::::Map Interface
  * You use a map when you want to identify values by a key.
@@ -39,6 +40,7 @@ public class MapCollection {
         Map<String, String> map = new HashMap<>();
         map.put("koala", "bamboo");
         map.put("lion", "meat");
+        map.put("lion", "meat");
         map.put("giraffe", "leaf");
         System.out.println(map.get("koala"));  // bamboo
         System.out.println("El map es => "+map);
@@ -61,6 +63,7 @@ public class MapCollection {
         System.out.println("::::LinkedHashMap:::::");
         Map<String, String> map = new TreeMap<>();
         map.put("koala", "bamboo");
+        map.put("koala", "bamboo");
         map.put("lion", "meat");
         map.put("giraffe", "leaf");
         System.out.println(map.get("koala"));  // bamboo
@@ -69,9 +72,38 @@ public class MapCollection {
     }
 
 
+    private static Map example1 (){
+        System.out.println("::::example1:::::");
+        Map<String, Integer> map = new TreeMap<>();
+        System.out.println(map.put("a", 1));
+        //System.out.println(map.computeIfPresent("a", (k,v)->v+1));
+        //System.out.println(map.computeIfPresent("a", (k,v)->v+1));
+        //map.replace("a", map.get("a")+1);
+
+        System.out.println(map.put("b", 1));
+        System.out.println(map.put("c", 1));
+        System.out.println(map);
+
+        //map.
+        /*
+        Stream<String> s = Stream.of("a, b, c, a, d, e, b, f, g".split(","));// 3
+        s.forEach(System.out::println);
+        System.out.println("II) ");
+       // s.forEach(System.out::println); genera error porque el stream ya fué operado
+        */
+
+
+        return map;
+    }
+
+
     public static void main(String ... args){
+        /*
         zooHashMap();//{koala=bamboo, giraffe=leaf, lion=meat}, no es el mismo orden de inserción :S
         zooLinkedHashMap();//{koala=bamboo, lion=meat, giraffe=leaf}, Es el mismo orden de insercion :)
         zooTreeMap();//{giraffe=leaf, koala=bamboo, lion=meat} alphabetic order
+        */
+
+        example1();
     }
 }

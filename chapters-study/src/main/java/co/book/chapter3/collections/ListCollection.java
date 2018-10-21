@@ -1,11 +1,22 @@
 package co.book.chapter3.collections;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Using ArrayList allow You  look up any element in constant time
+ Adding or removing an element is slower than accessing an element
+ good choice when you are reading more often
+ */
 public class ListCollection {
 
     private static List listZoo(){
+
+        String str = "a, b, c, a, d, e, b, f, g";
+
+        List<String> inputList = Arrays.asList(str.split(","));
+
         List<String> list = new ArrayList<>();
         list.add("pandas");
         list.add("zebras");
@@ -25,9 +36,7 @@ public class ListCollection {
 
 
     private static List listZoo2(){
-        //Using ArrayList allow You  look up any element in constant time
-        //Adding or removing an element is slower than accessing an element
-        //good choice when you are reading more often
+
         List<String> list = new ArrayList<>();
         list.add("pandas");
         list.add("zebras");
