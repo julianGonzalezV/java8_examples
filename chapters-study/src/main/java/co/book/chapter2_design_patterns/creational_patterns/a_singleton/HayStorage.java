@@ -1,8 +1,13 @@
-package co.book.chapter2_design_patterns.creational_patterns.singleton;
+package co.book.chapter2_design_patterns.creational_patterns.a_singleton;
 
 /**
  * the singleton class is effectively final, es decir qu eimplicitamente al hacerla
  * private de su constructor no es posible crear una subclase o usarla desde otras clases con new
+ *
+ *
+ * Forma de crear #1 directly in the definition of the instance reference. (line 22)
+ *
+ *
  */
 public class HayStorage {
     private int quantity = 0;
