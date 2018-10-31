@@ -1,0 +1,8 @@
+
+Page 76:
+
+Problem How do we create an object in memory only once in an application and have it
+shared by multiple classes?
+
+For example, we might want to manage the amount of hay(heno, grass ) available for food to
+the zoo animals across all classes that use it.
