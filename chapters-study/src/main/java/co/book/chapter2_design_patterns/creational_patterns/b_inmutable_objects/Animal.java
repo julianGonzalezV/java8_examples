@@ -8,9 +8,13 @@ import java.util.List;
  */
 public final  class Animal {
 
+    private String species;
+    private int age;
     private final List<String> favoriteFoods;
 
-    public Animal(List<String> favoriteFoods) {
+    public Animal(String species, int age, List<String> favoriteFoods) {
+        this.species = species;
+        this.age = age;
         if(favoriteFoods == null) {
             throw new RuntimeException("favoriteFoods is required");
         }
@@ -23,5 +27,18 @@ public final  class Animal {
      */
     public List<String> getFavoriteFoods() { // MAKES CLASS MUTABLE!,
         return favoriteFoods;
+    }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    @Override
+    public String toString() {
+        return "{"+species+","+ age+ ","+ favoriteFoods+"}";
     }
 }
