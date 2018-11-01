@@ -1,0 +1,27 @@
+Problem::::
+ How do we create an object that requires numerous values to be set at the time
+the object is instantiated?
+
+Motivation::::
+ As our data objects grow in size, the constructor may grow to contain many
+attributes. For example, in our most recent immutable Animal class example, we had three
+input parameters: species , age , and favoriteFoods . If we want to add fi ve new attributes
+to the object, we’d have to add fi ve new values in the constructor. Every time we add a
+parameter, the constructor grows! Users who reference our object would also be required
+to update their constructor calls each time that the object was modifi ed, resulting in a class
+that would be diffi cult to use and maintain. Alternatively, we could add a new constructor
+each time we add a parameter, but having too many constructors can be quite diffi cult to
+manage in practice.
+One solution is to use setter methods instead of the constructor to confi gure the object,
+but this doesn’t work for immutable objects since they can’t be modifi ed after creation.
+For mutable objects, it could also lead to class invariants being temporarily broken. For
+example, the attributes of the class may be dependent on each other, and setting them one
+at a time may expose a state where the object is not properly confi gured.
+
+
+Solution::::
+The builder pattern is a creational pattern in which parameters are passed to a
+builder object, often through method chaining, and an object is generated with a final build
+call. It is often used with immutable objects, since immutable objects do not have setter
+methods and must be created with all of their parameters set, although it can be used with
+mutable objects as well.
