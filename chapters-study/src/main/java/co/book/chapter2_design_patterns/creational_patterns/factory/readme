@@ -1,0 +1,15 @@
+Problem::::
+How do we write code that creates objects in which the precise type of the object
+may not be known until runtime?
+
+Motivation:::: As you saw with the builder pattern, object creation can be quite complex.
+We’d like some way of encapsulating object creation to deal with the complexity of
+object creation, including selecting which subclass to use, as well as loosely coupling the
+underlying creation implementation.
+
+Solution::::
+The factory pattern, sometimes referred to as the factory method pattern, is a
+creational pattern based on the idea of using a factory class to produce instances of objects
+based on a set of input parameters. It is similar to the builder pattern, although it is focused
+on supporting class polymorphism.
+Factory patterns are often, although
