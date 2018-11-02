@@ -1,4 +1,4 @@
-package co.book.chapter2_design_patterns.creational_patterns.factory;
+package co.book.chapter2_design_patterns.creational_patterns.d_factory;
 
 public abstract class Food {
     private int quantity;
