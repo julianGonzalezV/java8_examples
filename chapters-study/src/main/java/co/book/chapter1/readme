@@ -1,0 +1,16 @@
+pg 56  Table 1.1 Access modifiers
+
+:::::::::::::INSTANCEOF:::::::::::::::::
+Se usa por lo general antes de aplicar un casting
+
+public void feedAnimal(Animal animal) {
+    if(animal instanceof Cow) {
+        ((Cow)animal).addHay();
+    } else if(animal instanceof Bird) {
+        ((Bird)animal).addSeed();//note que El Pájaro se alimenta con semilla y no hay/heno
+    } else if(animal instanceof Lion) {
+        ((Lion)animal).addMeat();//note que El leon se alimenta con meat y no hay
+    } else {
+        throw new RuntimeException("Unsupported animal");//This is a good thing.
+    }
+}
