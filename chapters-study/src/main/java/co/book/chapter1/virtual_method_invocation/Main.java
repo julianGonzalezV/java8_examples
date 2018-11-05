@@ -35,7 +35,7 @@ public class Main {
 
         /**
          * Ojo que cuando son variables el caso es diferente
-         * Recuerda la famosa frase el tal "virtual variables invocation" NO existe.
+         * Recuerda la famosa frase " el tal virtual variables invocation NO existe".
          */
         lio.printName(); //print ??? y no Leonidas :O  :O   :O   :O
     }
