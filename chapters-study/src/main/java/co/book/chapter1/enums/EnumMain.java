@@ -38,6 +38,15 @@ public class EnumMain {
                 System.out.println("Is it summer yet?");
         }
 
+        System.out.println("More logic into a enum");
+        Season2 s2 = Season2.SUMMER;
+        s2.printHours();
+
+        System.out.println("default\n" +
+                "implementation and overriding method into a enum");
+        Season3 s3 = Season3.FALL;
+        s3.printHours();
+
 
     }
 }
