@@ -1,6 +1,11 @@
 package co.book.chapter5.dates_and_times;
 
 import java.time.*;
+import java.time.temporal.ChronoUnit;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class CreatingMain {
 
@@ -95,6 +100,114 @@ public class CreatingMain {
         System.out.println(dateTime);// 2020–01–18T19:14:30
 
 
+        /**
+         * Working with Periods
+         */
+        //1) Not using period
+        LocalDate start = LocalDate.of(2015, Month.JANUARY, 1);
+        LocalDate end = LocalDate.of(2015, Month.MARCH, 30);
+        performAnimalEnrichment(start, end);
+
+        /**
+         * Using Periods
+         */
+        System.out.println(" Using Periods::");
+        LocalDate startP = LocalDate.of(2015, Month.JANUARY, 1);
+        LocalDate endP = LocalDate.of(2015, Month.MARCH, 30);
+        Period period = Period.ofMonths(1);// create a period
+        performAnimalEnrichmentPeriod(startP, endP, period);// aumentando cada mes
+
+        Period wrong = Period.ofMonths(1).ofWeeks(1);// EL tal encademaniendo en Period NO EXISTE
+        //lo anterior es comi lo que sigue
+        Period wrong2 = Period.ofYears(1);
+        wrong2 = Period.ofWeeks(1);//está reasignando
+
+        Period wrongOK = Period.of(0, 1, 7); // 1  mes y una semana
+
+        performAnimalEnrichmentPeriod(startP, endP, wrongOK);
+
+
+        System.out.println(Period.ofWeeks(5));//P35D period of 35 days
+
+        /**
+         * Working with Durations
+         * Ya que period  llega hasta días entonces se cuenta con durations que permite
+         * unidad mas detallada number of days, hours, minutes, seconds, or nanosecond
+         */
+
+        Duration         daily = Duration.ofDays(1);//PT24H PT = Period of Time
+
+        Duration         everyMinute = Duration.ofMinutes(1); //PT1H
+
+        Duration         hourly = Duration.ofHours(1); // PT1M
+
+        Duration         everyTenSeconds = Duration.ofSeconds(10);// PT10S
+
+        Duration         everyMilli = Duration.ofMillis(1); // PT0.001S
+
+        Duration         everyNano = Duration.ofNanos(1); // PT0.000000001S
+
+        /**
+         * TAMBIEN BRINDA EL METODO OF()
+         */
+        Duration         daily2 = Duration.of(1, ChronoUnit.DAYS);
+
+        Duration         hourly2 = Duration.of(1, ChronoUnit.HOURS);
+
+        Duration         everyMinute2 = Duration.of(1, ChronoUnit.MINUTES);
+
+        Duration         everyTenSeconds2 = Duration.of(10, ChronoUnit.SECONDS);
+
+        Duration         everyMilli2 = Duration.of(1, ChronoUnit.MILLIS);
+
+        Duration         everyNano2 = Duration.of(1, ChronoUnit.NANOS);
+
+
+        /**
+         * Working with Instants
+         * represents a specific moment in time in the GMT time zone.
+         */
+
+        Instant now = Instant.now();//UTIL  PARA VER POR EJEMPLO CUANTO SE DEMORA UNA TAREA
+        // do something time consuming LLAME UN MÉTDODO X, EJEMPLO EXECUTOR
+        ExecutorService service = null;
+        try {
+            service = Executors.newSingleThreadExecutor();
+            service.awaitTermination(1000, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        Instant later = Instant.now();
+
+        Duration duration = Duration.between(now, later);
+        System.out.println("la tarea se tardó =>  "+duration.toMillis());
+
+    }
+
+    private static void performAnimalEnrichment(LocalDate start, LocalDate end) {
+        LocalDate upTo = start;
+        while (upTo.isBefore(end)) {// check if still before end
+            System.out.println("give new toy: " + upTo);
+            upTo = upTo.plusMonths(1);// add a month
+        }
+    }
+
+    /**
+     * Este código es más geberico que el anterior dado que recibe comoparametro un Period
+     * asi cuando no deseemmo que sea cada mes sino cada mes y 1 semana se enviaria dicha configuración
+     * en el period
+     * @param start
+     * @param end
+     * @param period
+     */
+    private static void performAnimalEnrichmentPeriod(LocalDate start, LocalDate end,
+                                                      Period period) {// uses the generic period
+        LocalDate upTo = start;
+        while (upTo.isBefore(end)) {
+            System.out.println("give new toy: " + upTo);
+            upTo = upTo.plus(period);// adds the period
+        }
     }
 
 }
