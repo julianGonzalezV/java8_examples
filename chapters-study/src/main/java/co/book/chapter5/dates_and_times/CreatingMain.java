@@ -183,6 +183,25 @@ public class CreatingMain {
         Duration duration = Duration.between(now, later);
         System.out.println("la tarea se tardó =>  "+duration.toMillis());
 
+
+        /**
+         * Accounting for Daylight Savings Time
+         */
+
+        LocalDate date3 = LocalDate.of(2016, Month.MARCH, 13);
+        LocalTime time4 = LocalTime.of(1, 30);
+        ZoneId zone3 = ZoneId.of("US/Eastern"); // confuguracion del este de estados unidos
+        ZonedDateTime dateTime3 = ZonedDateTime.of(date3, time4, zone3);
+
+        System.out.println(dateTime3); // 2016–03–13T01:30–05:00[US/Eastern]
+
+        dateTime3 = dateTime3.plusHours(1);// al sumarle una hora pesariamos que quedaría la nueva hora a la 02:30
+
+        System.out.println(dateTime3); // 2016–03–13T03:30–04:00[US/Eastern] ups son las 03:30
+        //el valor anterior es por que en horario de verano los relojes se deben ajustar y Java8 ya lo tiene en cuenta
+        // :o :o :o :o y también para esa hora el UTC cambia ohhh
+
+
     }
 
     private static void performAnimalEnrichment(LocalDate start, LocalDate end) {
