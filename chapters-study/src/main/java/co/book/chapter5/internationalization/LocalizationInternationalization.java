@@ -1,4 +1,4 @@
-package co.book.chapter5;
+package co.book.chapter5.internationalization;
 
 import java.util.Locale;
 
@@ -22,6 +22,14 @@ public class LocalizationInternationalization {
 
         /**
          * Using a Resource Bundle
-         */
+        */
+         Locale us = new Locale("en", "US");
+
+         Locale france = new Locale("fr", "FR");
+
+         Locale englishCanada = new Locale("en", "CA");
+
+         Locale frenchCanada = new Locale("fr", "CA");
+
     }
 }
