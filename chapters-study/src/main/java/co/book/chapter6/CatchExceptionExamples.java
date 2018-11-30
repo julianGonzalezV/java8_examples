@@ -8,6 +8,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
+import java.util.Scanner;
 
 public class CatchExceptionExamples {
 
@@ -76,6 +77,16 @@ public class CatchExceptionExamples {
              BufferedWriter out = Files.newBufferedWriter(path2)) {
             out.write(in.readLine());
         }
+
+
+        try (Scanner s = new Scanner(System.in)) {
+                s.nextLine();
+            } catch(Exception e) {
+                //s.nextInt(); // DOES NOT COMPILE primero porque el alcance de s es solo hasta que se cierra el try
+            // Segundo porque así se pudiera acceder, implicitamente ya se cerró e recurso
+            } finally{
+                //s.nextInt(); // DOES NOT COMPILE
+            }
     }
 
 
