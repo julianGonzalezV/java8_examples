@@ -35,7 +35,7 @@ public class StuckTurkeyCage implements AutoCloseable {
 
 
     /**
-     * Que pasa si además del exception que lanza el close() de StuckTurkeyCage el
+     * Que pasa si además del exception que lanza el close() de StuckTurkeyCage dentro del
      * TRY tambien lanzara una? R/ Ahí es cuando aparece suppressedException
      * manera en que java sabe acerca de una excepcion principal(la del try) y la
      * excepciOn CONTENIDA
