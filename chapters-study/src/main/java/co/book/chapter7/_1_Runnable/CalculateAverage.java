@@ -1,4 +1,4 @@
-package co.book.chapter7.Runnable;
+package co.book.chapter7._1_Runnable;
 
 
 /**
@@ -14,9 +14,19 @@ void run();
  */
 public class CalculateAverage implements Runnable {
 
+    private double[] scores;
+
+    /**
+     * Se pueden pasar argumentos para que se puedan usan en el método run()
+     * @param scores
+     */
+    public CalculateAverage(double[] scores) {
+        this.scores = scores;
+    }
 
     @Override
     public void run() {
         // Define work here
+        // puede usar el atributo scores acá
     }
 }

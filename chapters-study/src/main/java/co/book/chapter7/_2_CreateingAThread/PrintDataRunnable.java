@@ -1,4 +1,4 @@
-package co.book.chapter7;
+package co.book.chapter7._2_CreateingAThread;
 
 public class PrintDataRunnable implements Runnable {
     @Override

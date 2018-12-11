@@ -1,8 +1,8 @@
-package co.book.chapter7;
+package co.book.chapter7._2_CreateingAThread;
 
 
 //No es comun usar esta implementacion por algunas de las restricciones que tiene como herencia y porque
-//finalmente extiende de runnable
+//finalmente implementa runnable
 public class PrintDataExtendThread extends Thread {
 
     public void run() {
