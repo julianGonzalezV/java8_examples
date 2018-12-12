@@ -1,0 +1,8 @@
+■ If you need to define your own Thread rules upon which multiple tasks will rely, such
+as a priority Thread, extending Thread may be preferable.
+■■ Since Java doesn't support multiple inheritance, extending Thread does not allow you to
+extend any other class, whereas implementing Runnable lets you extend another class.
+■■ Implementing Runnable is often a better object-oriented design practice since it separates
+the task being performed from the Thread object performing it.
+■■ Implementing Runnable allows the class to be used by numerous Concurrency API
+classes.
