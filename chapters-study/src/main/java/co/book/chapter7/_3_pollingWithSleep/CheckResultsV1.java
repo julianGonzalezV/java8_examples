@@ -1,4 +1,4 @@
-package co.book.chapter7.polling;
+package co.book.chapter7._3_pollingWithSleep;
 
 public class CheckResultsV1 {
     private static int counter = 0;
