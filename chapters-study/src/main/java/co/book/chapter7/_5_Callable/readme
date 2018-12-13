@@ -1,0 +1,8 @@
+a diferencia de runnable , callable si retorna un valor o incluso null
+Firma del método:
+@FunctionalInterface public interface Callable<V> {
+V call() throws Exception;
+}
+
+
+

@@ -23,8 +23,9 @@ public class zooInfo {
             System.out.println("end");
         } finally {
             /**
-             * OJO shutdown no cancela las tareas que ya se habían enviado previamente al hilo
-             * si eso es lo que desea entonces use shutdownNow()
+             * OJO shutdown no cancela las tareas que ya se habían enviado previamente al hilo, sino que
+             * espera que se se ejecuten y ahí si se termina
+             * Pero si lo que desea es que se muera de una :) entonces use shutdownNow()
              */
             if(service != null) service.shutdown();
         }
