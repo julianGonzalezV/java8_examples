@@ -3,6 +3,8 @@ package co.book.chapter7._5_Callable;
 
 import java.util.concurrent.*;
 
+import static java.lang.Thread.*;
+
 /**
  * ExecutorService tambien tiene una version de submit que recibe un callable
  * y retorna un objeto de tipo Future<T>
@@ -12,7 +14,9 @@ public class AddData {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         //example1(); //DESOomentar para verificar funcionamiento
         //waitingForAllTasksToFinish();
-        schedulingTasksEg1();
+        //schedulingTasksEg1();
+        //repeatedlyTasks1();
+        repeatedlyTasks2();
     }
 
     private static void example1() throws InterruptedException, ExecutionException {
@@ -20,7 +24,7 @@ public class AddData {
         try {
             service = Executors.newSingleThreadExecutor();
             Future<Integer> result = service.submit(() -> {
-                Thread.sleep(5000);//simulando que la tarea toma 5 segundos y termina
+                sleep(5000);//simulando que la tarea toma 5 segundos y termina
                 return 30+11;
             });
             /**
@@ -48,7 +52,7 @@ public class AddData {
         try {
             service = Executors.newSingleThreadExecutor();
             Future<Integer> result = service.submit(() -> {
-                Thread.sleep(5000);//simulando que la tarea toma 5 segundos y termina
+                sleep(5000);//simulando que la tarea toma 5 segundos y termina
                 return 0;
             });
 
@@ -98,6 +102,49 @@ public class AddData {
              Ejecutando tarea 1
              Inicia tarea 2
          */
+    }
+
+    private static void repeatedlyTasks1() {
+        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+        Runnable task1 = () -> {
+            try {
+                System.out.println("Inicia a Ejecutar tarea 1");
+                sleep(5000);//simulando que la tarea toma 5 segundos y termina
+                System.out.println("Termina tarea 1");
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        };
+
+        /**
+         * No0te como scheduleAtFixedRate en este caso espera 7 segundos, inicia el task1 y cada 3 segundos vuelve y la ejecuta
+         * sin importar cuando toma tkas1 que en este ejemplo le colocamos 5 segundos
+         */
+        service.scheduleAtFixedRate(task1,7000,3000,TimeUnit.MILLISECONDS);
+    }
+
+    private static void repeatedlyTasks2() {
+        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+        Runnable task1 = () -> {
+            try {
+                System.out.println("Inicia a Ejecutar tarea 1");
+                sleep(5000);//simulando que la tarea toma 5 segundos y termina
+                System.out.println("Termina tarea 1");
+
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        };
+
+        /**
+         * No0te como scheduleWithFixedDelay en este caso espera 7 segundos, inicia el task1 y cada 3 segundos vuelve y la ejecuta
+         * Pero si la primera ejecución no ha terminado entonces este espera hasta lanzar la siguiente  ejecución de
+         * la tarea.
+         */
+        service.scheduleWithFixedDelay(task1,0,3000,TimeUnit.MILLISECONDS);
     }
 }
 
