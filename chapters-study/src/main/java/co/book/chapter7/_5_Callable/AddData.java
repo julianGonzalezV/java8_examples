@@ -140,7 +140,7 @@ public class AddData {
         };
 
         /**
-         * No0te como scheduleWithFixedDelay en este caso espera 7 segundos, inicia el task1 y cada 3 segundos vuelve y la ejecuta
+         * scheduleWithFixedDelay: En este caso espera 7 segundos, inicia el task1 y cada 3 segundos vuelve y la ejecuta
          * Pero si la primera ejecución no ha terminado entonces este espera hasta lanzar la siguiente  ejecución de
          * la tarea.
          */
