@@ -11,12 +11,12 @@ public class SheepManager {
     public static void main(String[] args) {
         ExecutorService service = null;
         try {
-            service = Executors.newFixedThreadPool(20);// el pool se define con 20 hilos dispuestos a
+            service = Executors.newFixedThreadPool(40);// el pool se define con 20 hilos dispuestos a
             //tomar cualquier tarea.
             //como hay 20 hilos concurrente entonces se pueden tener salidas como
             //1  3 4 5 6 7 8 9 2
             //Note como el computo del 2 se pierde y se coloca al final(si en el for con 10 no sucede entonces incremente, eg 90 :) ),
-            // esto se dá por no ser safe thread, o se pueden repetir vaslorea a la salida
+            // esto se dá por no ser safe thread, o se pueden repetir valores a la salida
             // dos hilos en este caso vieron el mismo valor para la variable sheepCount y realizaron la
             //operacion
             SheepManager manager = new SheepManager();

@@ -12,11 +12,11 @@ public class SheepManagerV2 {
     public static void main(String[] args) {
         ExecutorService service = null;
         try {
-            service = Executors.newFixedThreadPool(20);
-            //con esta implementacion lo que se asegura es que todos los computos se va a realizar , pero no asegura
+            service = Executors.newFixedThreadPool(40);
+            //con esta implementacion lo que se asegura es que todos los computos se van a realizar , pero no asegura
             //que la salida va a ser en orden
             SheepManagerV2 manager = new SheepManagerV2();
-            for(int i=0; i<70; i++)
+            for(int i=0; i<90; i++)
                 service.submit(() -> manager.incrementAndReport());
         } finally {
             if(service != null) service.shutdown();
