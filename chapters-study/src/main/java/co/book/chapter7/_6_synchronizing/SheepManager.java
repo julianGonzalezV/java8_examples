@@ -11,7 +11,7 @@ public class SheepManager {
     public static void main(String[] args) {
         ExecutorService service = null;
         try {
-            service = Executors.newFixedThreadPool(40);// el pool se define con 20 hilos dispuestos a
+            service = Executors.newFixedThreadPool(10);// el pool se define con 20 hilos dispuestos a
             //tomar cualquier tarea.
             //como hay 20 hilos concurrente entonces se pueden tener salidas como
             //1  3 4 5 6 7 8 9 2
@@ -20,7 +20,7 @@ public class SheepManager {
             // dos hilos en este caso vieron el mismo valor para la variable sheepCount y realizaron la
             //operacion
             SheepManager manager = new SheepManager();
-            for(int i=0; i<90; i++)
+            for(int i=0; i<180; i++)
                 service.submit(() -> manager.incrementAndReport());
         } finally {
             if(service != null) service.shutdown();

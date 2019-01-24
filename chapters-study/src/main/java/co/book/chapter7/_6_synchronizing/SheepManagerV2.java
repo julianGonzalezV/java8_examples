@@ -5,6 +5,10 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class SheepManagerV2 {
+    /**
+     * Atomic is the property of an operation to be carried out as a single unit of execution
+     without any interference by another thread
+     */
     private AtomicInteger sheepCount = new AtomicInteger();
     private void incrementAndReport() {
         System.out.print((sheepCount.incrementAndGet())+" ");

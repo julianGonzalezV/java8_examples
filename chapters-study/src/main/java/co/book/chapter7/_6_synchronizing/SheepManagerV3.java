@@ -5,9 +5,9 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class SheepManagerV3 {
-    private AtomicInteger sheepCount = new AtomicInteger();
+    private int sheepCount = 0;
     private void incrementAndReport() {
-        System.out.print((sheepCount.incrementAndGet())+" ");
+        System.out.print((++sheepCount +" "));
     }
     public static void main(String[] args) {
         ExecutorService service = null;
@@ -16,8 +16,16 @@ public class SheepManagerV3 {
             //con esta implementacion lo que se asegura es que todos los computos se va a realizar , pero no asegura
             //que la salida va a ser en orden 
             SheepManagerV3 manager = new SheepManagerV3();
-            for(int i=0; i<70; i++)
-                service.submit(() -> manager.incrementAndReport());
+
+            for(int i=0; i<180; i++) {
+                /**
+                 * El problema aún no se resuelve porque se está
+                 */
+                synchronized (manager) {
+                    service.submit(() -> manager.incrementAndReport());
+                }
+            }
+
         } finally {
             if(service != null) service.shutdown();
         }
