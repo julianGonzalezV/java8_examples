@@ -22,9 +22,27 @@ public class ConcurrentClasses {
         queue.offer(31);
         System.out.println(queue.peek());
         System.out.println(queue.poll());
+        System.out.println("peek =>" +queue.peek());
     }
 
     public static void ConcurrentLinkedDeq(){
+        Deque<Integer> deque = new ConcurrentLinkedDeque<>();
+        deque.offer(10);
+        deque.push(4);
+        System.out.println(deque.peek());
+        System.out.println(deque.pop());
+    }
+
+
+    public static void blockingQueue(){
+        Deque<Integer> deque = new ConcurrentLinkedDeque<>();
+        deque.offer(10);
+        deque.push(4);
+        System.out.println(deque.peek());
+        System.out.println(deque.pop());
+    }
+
+    public static void blockingDeQueue(){
         Deque<Integer> deque = new ConcurrentLinkedDeque<>();
         deque.offer(10);
         deque.push(4);
