@@ -1,8 +1,6 @@
 package co.book.chapter7._7_concurrentCollections;
 
-import java.util.Deque;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 import java.util.concurrent.*;
 
 public class ConcurrentClasses {
@@ -29,6 +27,29 @@ public class ConcurrentClasses {
         deque.push(4);
         System.out.println(deque.peek());
         System.out.println(deque.pop());
+    }
+
+
+    /**
+     * Note como a pesar de que se itera y a la vez se adicionan elementos en LInput
+     * al hacer System.out.print(item+" "); dentro del for muestra solo los elementos originales de la
+     * lista INTERESANTE PARA TEMAS DE CONCURRENCIA
+     *
+     * CopyOnWriteArrayList: Cada vez que existe una operacion de added, modifi ed, or removed
+     * tooodos los elementos se copian en una nueva estructura
+     *
+     * @param LInput
+     */
+    public static void copyOnWriteArrayList(List<Integer>  LInput){
+        //List<Integer> list = new CopyOnWriteArrayList<>(Arrays.asList(4,3,52));
+        for(Integer item: LInput) {
+            System.out.print(item+" ");
+            LInput.add(9);
+        }
+        System.out.println();
+        //Pero cuando termina su tamanio si incluye los registros que agtregó en el for
+        System.out.println("Size: "+LInput.size());
+
     }
 
     /***
@@ -82,6 +103,15 @@ public class ConcurrentClasses {
         ConcurrentHMap();
         ConcurrentLinkedQ();
         ConcurrentLinkedDeq();
-
+        /*
+        Note como saca error de UnsupportedOperationException
+         */
+        //copyOnWriteArrayList(Arrays.asList(4,3,52));
+        /**
+         * Acá si funciona porque la estructura es cocnurrrente
+         * Uselo en ambinetes de concurrencia donde la operación de lectura es
+         * más común que la escritura
+         */
+        copyOnWriteArrayList(new CopyOnWriteArrayList<>(Arrays.asList(4,3,52)));
     }
 }
