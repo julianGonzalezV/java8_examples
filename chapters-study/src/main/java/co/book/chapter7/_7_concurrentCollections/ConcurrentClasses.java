@@ -108,8 +108,8 @@ public class ConcurrentClasses {
          */
         //copyOnWriteArrayList(Arrays.asList(4,3,52));
         /**
-         * Acá si funciona porque la estructura es cocnurrrente
-         * Uselo en ambinetes de concurrencia donde la operación de lectura es
+         * Acá si funciona porque la estructura es concurrrente
+         * Úselo en ambinetes de concurrencia donde la operación de lectura es
          * más común que la escritura
          */
         copyOnWriteArrayList(new CopyOnWriteArrayList<>(Arrays.asList(4,3,52)));
