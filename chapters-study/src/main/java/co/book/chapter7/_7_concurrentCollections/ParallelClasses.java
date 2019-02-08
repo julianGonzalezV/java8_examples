@@ -46,6 +46,10 @@ public class ParallelClasses {
     public static void example4(){
 
         Stream st1 =  Arrays.asList(1,2,3,4,5,6).parallelStream();
+        /**
+         * La operacion forEach en un parallel stream es como hacer varios
+         * .submit de lambas runnable en un pool executor(ver carpeta xx)
+         */
         st1.forEach(s -> System.out.print(s+" "));
     }
 
@@ -71,6 +75,9 @@ public class ParallelClasses {
 
         example3();
 
+        /**
+         * note en example4 como el procesamiento en paralelo no asegura que termina primero
+         */
         System.out.println("example4 => ");
         example4();
     }
