@@ -10,7 +10,7 @@ public class PerformanceImprovement {
         WhaleDataCalculator calculator = new WhaleDataCalculator();
         // Define the data
         List<Integer> data = new ArrayList<Integer>();
-        for(int i=0; i<1000; i++) data.add(i);
+        for(int i=0;git  i<1000; i++) data.add(i);
 
         System.out.println(":::::::::::::::::::::SERIAL");
         long start = System.currentTimeMillis();
