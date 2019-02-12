@@ -63,84 +63,6 @@ public class StateLessVsStateFul {
     }
 
 
-    /**
-     *Recuerde la firma de reduction:
-     * reduce(U identity,BiFunction<U, ? super T, U> accumulator,BinaryOperator<U> combiner)
-     * identity: The zero value
-     * accumulator: funcion que indica como se compbinar el resultado actual al acumularo
-     * combiner: Function to combiner two values
-     *
-     * Requirements for reduce() Arguments
-     ■ The identity must be defined such that for all elements in the stream u ,
-     combiner.apply(identity, u) is equal to u .
-     ■ The accumulator operator op must be associative and stateless such that (a op b) op c
-     is equal to a op (b op c) .
-     ■ The combiner operator must also be associative and stateless and compatible with the
-     identity, such that for all u and t combiner.apply(u,accumulator.apply(identity,t))
-     is equal to accumulator.apply(u,t) .
-     *
-     */
-    public static void ParallelReductions() {
-       /* System.out.println(Arrays.asList('w', 'o', 'l', 'f')
-                .stream().reduce("",(c,s1) -> c + s1,(s2,s3) -> s2 + s3));*/
-
-        /**
-         * Version desmenusada :)
-         * Noteel valor identidad
-         */
-        System.out.println(Arrays.asList('w', 'o', 'l', 'f')
-                .stream().reduce("x",(c,s1) -> {
-                    System.out.println("c=> "+c+"  s1=> "+s1);
-                    return c + s1;
-                },(s2,s3) -> {
-                    System.out.println("hola");
-
-                    System.out.println("s2=> "+s2+"  s3=> "+s3);
-                    return s2+s3;
-                }));
-
-        /**
-         * En parallel el valor identidad se va para todos sus hilos o particiones
-         */
-        System.out.println("Versión Paralela");
-        System.out.println(Arrays.asList('w', 'o', 'l', 'f')
-                .parallelStream().reduce("x",(c,s1) -> {
-                    System.out.println("c=> "+c+"  s1=> "+s1);
-                    return c + s1;
-                },(s2,s3) -> {
-                    //si se quita esta función entonces falla porque para el tipo de dato
-                    //del list en este caso charater no sabría como unir los dos
-                    return s2+s3;
-                }));
-
-        /**
-         * Resultados:
-         * Serial : xwolf
-         * Paralelo: xwxoxlxf, Note como la x se reoartió en los computos paralelos
-         * y la salida se vió afectada, porque X no es un valor identidad confiable
-         */
-
-
-        /**
-         * La resta no cumple con las reglas del reduce, pues no es asociativa la función(ver arriba en al documentación de
-         * éste método)
-         */
-        System.out.println(" NOT AN ASSOCIATIVE ACCUMULATOR");
-        System.out.println(Arrays.asList(1,2,3,4,5,6)
-                .parallelStream()
-                .reduce(0,(a,b) -> {
-                    return (a-b);
-                })); // NOT AN ASSOCIATIVE ACCUMULATOR
-
-
-
-        System.out.println(Arrays.asList("w", "o", "l", "f")
-                .parallelStream().reduce("",(c,s1) ->  (c + s1)));
-    }
-
-    public static void ParallelCollect() {
-
-    }
 
 
 
@@ -154,7 +76,6 @@ public class StateLessVsStateFul {
         System.out.println();
         stateFulRegularArray();
         OrderBasedTasks();*/
-        ParallelReductions();
     }
 
 
