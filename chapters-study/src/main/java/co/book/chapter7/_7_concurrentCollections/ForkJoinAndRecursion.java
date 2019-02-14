@@ -28,6 +28,7 @@ public class ForkJoinAndRecursion {
      * @param weights
      */
     static void forkJoin(Double[] weights){
+        System.out.println("Animales que se deben pesar: "+weights.length);
         ForkJoinTask<?> task = new WeighAnimalAction(weights,0,weights.length);
         ForkJoinPool pool = new ForkJoinPool();
         pool.invoke(task);
@@ -43,10 +44,27 @@ public class ForkJoinAndRecursion {
      * @param args
      */
     public static void main(String ... args){
-        System.out.println("factorial => "+factorial(5));
+        //System.out.println("factorial => "+factorial(5));
 
         System.out.println("FORK JOIN TASKS");
         forkJoin(new Double[10]);
+        /** El anterior va a imprimir
+         * FORK JOIN TASKS
+         * Animales que se deben pesar: 10
+         [start=0,middle=5,end=10]
+         [start=0,middle=2,end=5]
+         Animal Weighed: 0
+         Animal Weighed: 2
+         Animal Weighed: 1
+         [start=5,middle=7,end=10]
+         Animal Weighed: 5
+         Animal Weighed: 3
+         Animal Weighed: 4
+         Animal Weighed: 6
+         Animal Weighed: 7
+         Animal Weighed: 8
+         Animal Weighed: 9
+         */
 
 
     }
@@ -85,6 +103,8 @@ class WeighAnimalAction extends RecursiveAction {
             /**
              * invokeAll viene de la clase ForkJoinTask ya que RecursiveAction extends ForkJoinTask
              * pasndole 2 instancias cuando la cantidad de end-start es mayor que 3
+             * Note el llamado recursivo pues se ejecutará el método WeighAnimalAction.compute
+             * en cada división
              */
             invokeAll(new WeighAnimalAction(weights,start,middle),
                     new WeighAnimalAction(weights,middle,end));
