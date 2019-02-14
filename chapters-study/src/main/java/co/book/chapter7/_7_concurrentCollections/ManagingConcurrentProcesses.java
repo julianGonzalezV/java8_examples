@@ -26,11 +26,22 @@ public class ManagingConcurrentProcesses {
     public static void main(String[] args) {
         ExecutorService service = null;
         LionPenManager manager = new LionPenManager();
-        CyclicBarrier c1 = new CyclicBarrier(4);
-        CyclicBarrier c2 = new CyclicBarrier(4,() -> System.out.println("*** Pen Cleaned!"));
+        CyclicBarrier c1 = new CyclicBarrier(3);
+        CyclicBarrier c2 = new CyclicBarrier(3,() -> System.out.println("*** Pen Cleaned!"));
         try {
-            service = Executors.newFixedThreadPool(4);
-            for(int i=0; i<4; i++)
+            /**
+             * OJO la cantidad de hilos en el pool debe ser ayor o igual
+             * a los hilos especificados en new CyclicBarrier(3)
+             * porque si es menor se va a colgar el computo.
+             * Ejemplo:
+             * >El CyclicBarrier se terminará cuando 3 hilos lo invoquen
+             * >Usted lanza un pool de 2 hilos
+             * > El CyclicBarrier nunca caerá porque estará esperando a que ése
+             * 3cer hilo se ejecute, pero nunca abrá un 3ro ud definió un pool de 2!!!
+             *
+             */
+            service = Executors.newFixedThreadPool(9);
+            for(int i=0; i<12; i++)
                 service.submit(() -> manager.performTaskV2(c1,c2));
         } finally {
             if(service != null) service.shutdown();
@@ -61,10 +72,11 @@ class LionPenManager{
     public void performTaskV2(CyclicBarrier c1, CyclicBarrier c2) {
         try {
             /**
-             * Wow note como se ejeucta primero toodos y solo todos los llamados EN
+             * Wow note como se ejecuta primero toodos y solo todos los llamados EN
              * UN SOLO PASO DE Removing animals, luego
-             * Luego se ejecuta el otro tambien todos
-             * y finalmente ahí si se hace addAnimals para que no se coman a las personas de mantenimiento del
+             * Luego se ejecuta el cleanPen() tambien todos
+             * y finalmente ahí si se hace addAnimals()
+             * para que no se coman a las personas de mantenimiento del
              * zoo
              */
             removeAnimals();
@@ -73,6 +85,9 @@ class LionPenManager{
              * los hilo no ejecuten este método no pueden pasar en el proceso
              * RECURDE QUYE  EN ESTE CASO removeAnimals() está siendo ejecutado en paralelo
              */
+            //el sgte CyclicBarrier fu'e configirado para esperar 3 hilos
+            //pero si su llamado tienen 9 hilos al llegar los 3 el CyclicBarrier vuelve y se activa
+            //para esperar ootros 3 hilos
             c1.await();
             cleanPen();
             c2.await();
