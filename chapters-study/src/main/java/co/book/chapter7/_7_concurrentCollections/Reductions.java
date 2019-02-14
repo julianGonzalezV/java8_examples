@@ -1,6 +1,7 @@
 package co.book.chapter7._7_concurrentCollections;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.concurrent.ConcurrentMap;
@@ -128,20 +129,28 @@ public class Reductions {
         Stream<String> ohMy = Stream.of("lions", "tigers", "bears").parallel();
         /**Primero la firma de toConcurrentMap es:
          *
-         * toConcurrentMap(Function<? super T, ? extends K> keyMapper,
+         * toConcurrentMap(
+         Function<? super T, ? extends K> keyMapper,
          Function<? super T, ? extends U> valueMapper,
          BinaryOperator<U> mergeFunction)
          *
          *
-         * Lo que se le dice al collect acá es que ConcurrentMap va a ser ala estructura final
+         * Lo que se le dice al collect acá es que ConcurrentMap va a ser la estructura final
          * en que se debe acumular el resultado en donde el key será el tamanio de del string
          * y el value es eñ string y LA FUNCION DE MERGE es que cada string que tenga el mismo
          * tamanio se separará por coma ","
          */
-        ConcurrentMap<Integer, String> map = ohMy.collect(Collectors.
-                toConcurrentMap(String::length, k -> k,(s1, s2) -> s1 + "," + s2));
+        ConcurrentMap<Integer, String> map = ohMy.collect(
+                Collectors.toConcurrentMap(String::length, k -> k,(s1, s2) -> s1 + "," + s2));
         System.out.println(map); // {5=lions,bears, 6=tigers}
         System.out.println(map.getClass()); // java.util.concurrent.ConcurrentHashMap
+    }
+
+    static void  getStringLengthV2(){
+        Stream<String> ohMy = Stream.of("lions", "tigers", "bears").parallel();
+        ConcurrentMap<Integer, List<String>> map = ohMy.collect(
+                Collectors.groupingByConcurrent(String::length));
+        System.out.println(map); // {5=[lions, bears], 6=[tigers]}
     }
 
 
@@ -158,6 +167,7 @@ public class Reductions {
         //ParallelReductions();
         //usingCollect();
         getStringLength();
+        getStringLengthV2();
     }
 
 }
