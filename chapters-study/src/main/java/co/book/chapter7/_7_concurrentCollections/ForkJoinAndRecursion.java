@@ -5,6 +5,7 @@ import java.util.Random;
 import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveAction;
+import java.util.concurrent.RecursiveTask;
 
 public class ForkJoinAndRecursion {
 
@@ -72,7 +73,8 @@ public class ForkJoinAndRecursion {
 }
 
 /**
- *
+ * Versoin que hace uso del método cmpute de la clase RecursiveAction o más bien de fork jpin
+ * que es la que hereda RecursiveAction
  */
 class WeighAnimalAction extends RecursiveAction {
     private int start;
@@ -95,7 +97,7 @@ class WeighAnimalAction extends RecursiveAction {
         if(end-start <= 3)
             for(int i=start; i<end; i++) {
                 weights[i] = (double)new Random().nextInt(100);
-                System.out.println("Animal Weighed: "+i);
+                System.out.println("start:"+start+", end:"+end+" Animal Weighed: "+i);
             }
         else {
             int middle = start+((end-start)/2);
@@ -108,6 +110,51 @@ class WeighAnimalAction extends RecursiveAction {
              */
             invokeAll(new WeighAnimalAction(weights,start,middle),
                     new WeighAnimalAction(weights,middle,end));
+        }
+    }
+}
+
+
+
+/**
+ * Versoin que hace uso del método compute de la clase RecursiveTask que a diferencia de RecursiveAction
+ * lo que hace es que el compute devuelve un valor! , suponga que desea saber la suma de todos los
+ * pesaje de animales en el zoologico
+ */
+class WeighAnimalActionCarryingAResult extends RecursiveTask {
+    private int start;
+
+    private int end;
+    private Double[] weights;
+    public WeighAnimalActionCarryingAResult(Double[] weights, int start, int end) {
+        this.start = start;
+        this.end = end;
+        this.weights = weights;
+    }
+
+
+
+    /**
+     * Compute es un método heredado de RecursiveAction
+     */
+    @Override
+    protected Double compute() {
+        if(end-start <= 3){
+            double suma = 0;
+            for(int i=start; i<end; i++) {
+                weights[i] = (double)new Random().nextInt(100);
+                System.out.println("start:"+start+", end:"+end+" Animal Weighed: "+i);
+                suma+=weights[i];
+            }
+            return suma;
+        }
+
+        else {
+            int middle = start+((end-start)/2);
+            System.out.println("[start="+start+",middle="+middle+",end="+end+"]");
+            RecursiveTask<Double> otherTask = new WeighAnimalActionCarryingAResult(weights,start,middle);
+            otherTask.fork();
+            return new WeighAnimalActionCarryingAResult(weights,middle,end).compute() + otherTask.join();
         }
     }
 }
