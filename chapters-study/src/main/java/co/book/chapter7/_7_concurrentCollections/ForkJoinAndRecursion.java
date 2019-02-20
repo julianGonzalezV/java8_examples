@@ -26,7 +26,8 @@ public class ForkJoinAndRecursion {
 
     /**
      *
-     * @param weights
+     * @param weights: Note como en el primer llamado weigths es un array con puros ceros.,
+     *               no hay pesos caculados o realizados
      */
     static void forkJoin(Double[] weights){
         System.out.println("Animales que se deben pesar: "+weights.length);
@@ -38,6 +39,24 @@ public class ForkJoinAndRecursion {
         System.out.print("Weights: ");
         Arrays.asList(weights).stream().forEach(
                 d -> System.out.print(d.intValue()+" "));
+    }
+
+    static void forkJoinCarrryingValue(Double[] weights){
+
+        System.out.println("forkJoinCarrryingValue Animales que se deben pesar: "+weights.length);
+        //el double dentro del diamante indica que  la tarea retorna este tipo de dato
+        ForkJoinTask<Double> task = new WeighAnimalActionCarryingAResult(weights,0,weights.length);
+        ForkJoinPool pool = new ForkJoinPool();
+        /**
+         * por la definicioa de ForkJoinTask<Double>, no es necesario hacer casting acá de
+         * (Double)pool.invoke(task) porque ya se infiere, quite el Double de ForkJoinTask<Double>, y
+         * notaráque le pide casting
+
+         */
+        Double result = pool.invoke(task);
+        // Print results
+        System.out.println();
+        System.out.print("Weights Sum: "+result);
     }
 
     /**
@@ -67,6 +86,8 @@ public class ForkJoinAndRecursion {
          Animal Weighed: 9
          */
 
+        forkJoinCarrryingValue(new Double[10]);
+
 
     }
 
@@ -95,6 +116,10 @@ class WeighAnimalAction extends RecursiveAction {
     @Override
     protected void compute() {
         if(end-start <= 3)
+        /**
+         * desde start hasta end, siendo ambos el # del workera realizar la tarea,
+         * en este caso pesar los animales :)
+         */
             for(int i=start; i<end; i++) {
                 weights[i] = (double)new Random().nextInt(100);
                 System.out.println("start:"+start+", end:"+end+" Animal Weighed: "+i);
@@ -117,7 +142,7 @@ class WeighAnimalAction extends RecursiveAction {
 
 
 /**
- * Versoin que hace uso del método compute de la clase RecursiveTask que a diferencia de RecursiveAction
+ * Versión que hace uso del método compute de la clase RecursiveTask que a diferencia de RecursiveAction
  * lo que hace es que el compute devuelve un valor! , suponga que desea saber la suma de todos los
  * pesaje de animales en el zoologico
  */
@@ -140,6 +165,7 @@ class WeighAnimalActionCarryingAResult extends RecursiveTask {
     @Override
     protected Double compute() {
         if(end-start <= 3){
+            // se crea nueva variable suma que llevará la suma de todos los pesos
             double suma = 0;
             for(int i=start; i<end; i++) {
                 weights[i] = (double)new Random().nextInt(100);
