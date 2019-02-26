@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Feb 25 22:16:28 COT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0169-27cd-bd14-0000067f7c90 
+on database directory /home/jag/Documents/study/java8/java8_cert/chapters-study/zoo with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/home/jag/.gradle/caches/modules-2/files-2.1/org.apache.derby/derby/10.14.2.0/7efad40ef52fbb1f08142f07a83b42d29e47d8ce/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_131-b11
+user.dir=/home/jag/Documents/study/java8/java8_cert/chapters-study
+os.name=Linux
+os.arch=amd64
+os.version=4.15.0-45-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
