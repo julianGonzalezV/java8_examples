@@ -39,11 +39,12 @@ public class MapCollection {
         System.out.println("::::HashMap:::::");
         Map<String, String> map = new HashMap<>();
         map.put("koala", "bamboo");
-        map.put("lion", "meat");
+
+        map.put("lion", "sdfsd");
         map.put("lion", "meat");
         map.put("giraffe", "leaf");
         System.out.println(map.get("koala"));  // bamboo
-        System.out.println("El map es => "+map);
+        System.out.println("El HashMap es => "+map);
         return map;
     }
 
@@ -54,7 +55,7 @@ public class MapCollection {
         map.put("lion", "meat");
         map.put("giraffe", "leaf");
         System.out.println(map.get("koala"));  // bamboo
-        System.out.println("El map es => "+map);
+        System.out.println("El LinkedHashMap es => "+map);
         return map;
     }
 
@@ -67,7 +68,7 @@ public class MapCollection {
         map.put("lion", "meat");
         map.put("giraffe", "leaf");
         System.out.println(map.get("koala"));  // bamboo
-        System.out.println("El map es => "+map);
+        System.out.println("El TreeMap es => "+map);
         return map;
     }
 
@@ -75,13 +76,15 @@ public class MapCollection {
     private static Map example1 (){
         System.out.println("::::example1:::::");
         Map<String, Integer> map = new TreeMap<>();
+        System.out.println(map.put("c", 1));
+        System.out.println(map.put("b", 1));
         System.out.println(map.put("a", 1));
         //System.out.println(map.computeIfPresent("a", (k,v)->v+1));
         //System.out.println(map.computeIfPresent("a", (k,v)->v+1));
         //map.replace("a", map.get("a")+1);
 
-        System.out.println(map.put("b", 1));
-        System.out.println(map.put("c", 1));
+
+
         System.out.println(map);
 
         //map.
@@ -103,7 +106,9 @@ public class MapCollection {
         zooLinkedHashMap();//{koala=bamboo, lion=meat, giraffe=leaf}, Es el mismo orden de insercion :)
         zooTreeMap();//{giraffe=leaf, koala=bamboo, lion=meat} alphabetic order
         */
-
-        example1();
+        zooHashMap();
+        zooTreeMap();
+        zooLinkedHashMap();
+        //example1();
     }
 }

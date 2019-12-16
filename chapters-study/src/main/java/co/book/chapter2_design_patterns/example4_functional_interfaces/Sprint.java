@@ -9,5 +9,4 @@ import co.book.chapter2_design_patterns.example3.Animal;
 @FunctionalInterface
 public interface Sprint {
     public void sprint(Animal animal);
-    //public void sprint2(Animal animal);
 }

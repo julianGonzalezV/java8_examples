@@ -65,5 +65,9 @@ public class example1 {
         example1( Arrays.asList(10, 2, 10, 7, 5, 2, 9, 7, 8, 11,11, 12, 13, 14));
         example2( Arrays.asList("a,b,c,a,d,e,b,f,g".split(",")));
 
+        /**
+         * hACER LO MISMO PERO FUNCION AL:) :) :)
+         */
+
     }
 }
