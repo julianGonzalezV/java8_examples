@@ -3,6 +3,7 @@ package com.tdd.example.demo.service;
 import com.tdd.example.demo.model.ToDo;
 import com.tdd.example.demo.repository.ToDoRepository;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -33,6 +34,7 @@ public class ToDoServiceTest {
     }
 
     @Test
+    @DisplayName("probar Get All")
     void getAll(){
         ToDo todoSample = new ToDo("Todo Sample 1",true);
         toDoRepository.save(todoSample);
