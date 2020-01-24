@@ -15,9 +15,9 @@ public class CheckResultsV2 {
        note como el while imprime muuucho menos que el de la V1*/
 
         new Thread(() -> {
-            for(int i=0; i<5000; i++) CheckResultsV2.counter++;
+            for(int i=0; i<500000; i++) CheckResultsV2.counter++;
         }).start();
-        while(CheckResultsV2.counter<1000) {
+        while(CheckResultsV2.counter<100000) {
             System.out.println("Not reached yet");
             Thread.sleep(100); // 1 SECOND
         }
