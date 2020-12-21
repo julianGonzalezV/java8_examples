@@ -13,9 +13,9 @@ public class SheepManagerV4 {
      */
     private void incrementAndReport() {
         synchronized (this) {
-            System.out.print((++sheepCount +" "));
-        }
+        System.out.print((++sheepCount +" "));
     }
+}
 
     /**
      * El método anterior y este son lo mismo solo cambia la ubicación de
