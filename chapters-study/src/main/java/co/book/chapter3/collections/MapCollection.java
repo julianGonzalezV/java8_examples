@@ -21,7 +21,7 @@ import java.util.stream.Stream;
  * much like HashMap but you DON'T lose the order in which you inserted the elements (insertion-order)
  *
  *
- * * 2) :::::::TreeMap::::::
+ * 3) :::::::TreeMap::::::
  *The main benefit is that the keys are
  always in sorted order.
  * The tradeoff is that adding and checking if a key is present are both
@@ -61,7 +61,7 @@ public class MapCollection {
 
 
     private  static Map zooTreeMap(){
-        System.out.println("::::LinkedHashMap:::::");
+        System.out.println("::::TreeMap:::::");
         Map<String, String> map = new TreeMap<>();
         map.put("koala", "bamboo");
         map.put("koala", "bamboo");
@@ -107,8 +107,9 @@ public class MapCollection {
         zooTreeMap();//{giraffe=leaf, koala=bamboo, lion=meat} alphabetic order
         */
         zooHashMap();
-        zooTreeMap();
         zooLinkedHashMap();
+        zooTreeMap();
+
         //example1();
     }
 }

@@ -234,6 +234,7 @@ public class StreamMain {
 
         Stream<String> namesExample2 = Stream.of("www.google.com.co", "application.device", "frank.d.cardona", "192.168.10.12");
         String[] arrTest =  namesExample2.flatMap(x-> Stream.of(x.split("\\."))).toArray(size->new String[size]);
+        System.out.println("arrTest => "+arrTest);
         Stream.of(arrTest).forEach(System.out::print);
 
 

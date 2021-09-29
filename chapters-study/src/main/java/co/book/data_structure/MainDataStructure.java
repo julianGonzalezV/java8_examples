@@ -29,7 +29,8 @@ public class MainDataStructure {
          * This approach is called an anonymous array.It is anonymous because you don’t specify
          the type and size
          */
-        int[] numbers3 = {42, 55, 99};
+        int[] numbers3 = {99,42, 55,};
+        System.out.println("numbers3 => "+numbers3.toString());
         System.out.println(numbers3[1]);
 
         /**
@@ -59,6 +60,7 @@ public class MainDataStructure {
          * se va
          */
         int[] numbers = {2,4,6,8};
+
         System.out.println(Arrays.binarySearch(numbers,2));
         System.out.println(Arrays.binarySearch(numbers, 4));
         System.out.println(Arrays.binarySearch(numbers, 1));

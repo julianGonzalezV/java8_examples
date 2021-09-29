@@ -14,7 +14,7 @@ import java.util.Queue;
  *
  *
  * ::::::::: Queue Implementations :::::::::::::
- * ArrayDeque: Pure Queue (see code below), more performance than LinkedList
+ * ArrayDeque: Pure Queue (see code below), better performance than LinkedList
  *
  * LinkedList: Works as a List or Queue (implements both List and Queue)
  *
@@ -41,11 +41,14 @@ public class QueueCollection {
         System.out.println(queue.offer(10)); // true
         System.out.println(queue.offer(4)); // true
         System.out.println(queue.add(20)); //true
-        //queue.push(30) /Does not compile because this is a FIFO queue
-        System.out.println("La va n cola es => "+queue); // 10
+        //queue.push(30) //Does not compile because this is a FIFO queue push is allowed in LIFO ones
+        System.out.println("La cola tipo ArrayDeque es => "+queue); // 10
         System.out.println(queue.peek()); // 10
+        System.out.println("Despues de peek() => "+queue); // 10
         System.out.println(queue.poll()); // 10
+        System.out.println("Despues de poll()=> "+queue); // 10
         System.out.println(queue.poll()); // 4
+        System.out.println("Despues de poll()"+queue); // 10
         System.out.println(queue.peek()); // null
         return queue;
     }
@@ -61,11 +64,15 @@ public class QueueCollection {
         System.out.println(queue.offer(4)); // true
         System.out.println(queue.add(20)); //true
         queue.push(30);
-        System.out.println("La va n cola es => "+queue); // 10
+        System.out.println("LIFO ArrayDeque  es => "+queue); // 10
         System.out.println(queue.peek()); // 10
+        System.out.println("LIFO ArrayDeque  es => "+queue); // 10
         System.out.println(queue.poll()); // 10
+        System.out.println("LIFO ArrayDeque  es => "+queue); // 10
         System.out.println(queue.poll()); // 4
+        System.out.println("LIFO ArrayDeque  es => "+queue); // 10
         System.out.println(queue.peek()); // null
+        System.out.println("LIFO ArrayDeque  es => "+queue); // 10
         return queue;
     }
 
@@ -115,7 +122,7 @@ public class QueueCollection {
         System.out.println(numbersArrayDequeLifo());
 
         /**LinkeList funciona exactamente igual que ArrayDeque, pero recuerde que a nivel
-        de performance la teoría recoienda ArrayDeque*/
+        de performance la teoría recomienda ArrayDeque*/
         System.out.println(":::::::::::::::LinkedList => ");
         System.out.println(numbersLinkedListFifo());
         System.out.println(numbersLinkedListLifo());

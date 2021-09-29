@@ -48,7 +48,7 @@ Printing zoo inventory
             //SUPER IMPORTANTE LLAMAR AL SHUTDOWN
             //Ojo no siempre , isShutdown() and isTerminated() van a ser true cuando se llama a shutdown
             //pues implica que si tiene tareas pendientes entonces la debe terminar por lo cual seria true false
-            //una vez culmina todas susus tareas ahí si sería true true , lo que si se asegura que el hilo no
+            //una vez culmina todas sus tareas ahí si sería true true , lo que si se asegura es que el hilo no
             //reciba mas computos a realizar.
             //shutdownNow() Intenta detener all threads pero recordar que pueden existir tareas infinitas que se le haya enviado al
             //thread  y este nunca termine

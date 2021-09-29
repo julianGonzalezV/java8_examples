@@ -30,8 +30,8 @@ public class VisitorTicketTracker {
              * por lo cual se crea una vez se cargue la clase y no es posible modificarse, ACÁ NO ES FINAL PRECISAMENTE POR E
              * VALIDACION de si es null entoncdes retorne un new
              *
-             * 2) Imagine 2 hilos accediendo a la misma vez y solictando getInstace, pues se crearan 2 a la misma vez
-             * y todo lo que pase de aalí en daelante es inseguro a nivel de concurrencia
+             * 2) Imagine 2 hilos accediendo a la misma vez y solicitando getInstance, pues se crearan 2 a la misma vez
+             * y todo lo que pase de allí en adelante es inseguro a nivel de concurrencia
              *
              * SOLUCIÓN A LO ANTERIOR ES
              *public static synchronized VisitorTicketTracker getInstance(){...

@@ -8,7 +8,7 @@ public class ParallelClasses {
 
     /**
      * Creando un stream paralelo desde un stream sencillo
-     * la idea de paralelo es que cada elementos se pude procesar por unhilo diferente
+     * la idea de paralelo es que cada elementos se pude procesar por un hilo diferente
      * algo así como atender a la vez a todos las personas en una fila :)
      */
     public static Stream<Integer>  example1(){
@@ -41,7 +41,7 @@ public class ParallelClasses {
     /**
      * Processing Tasks in Parallel
      * @return.
-     * Note comola impresion en la salida no siempre es en order
+     * Note como la impresion en la salida no siempre es en order
      */
     public static void example4(){
 
