@@ -30,7 +30,7 @@ public class ManagingConcurrentProcesses {
         CyclicBarrier c2 = new CyclicBarrier(3,() -> System.out.println("*** Pen Cleaned!"));
         try {
             /**
-             * OJO la cantidad de hilos en el pool debe ser ayor o igual
+             * OJO la cantidad de hilos en el pool debe ser mayor o igual
              * a los hilos especificados en new CyclicBarrier(3)
              * porque si es menor se va a colgar el computo.
              * Ejemplo:

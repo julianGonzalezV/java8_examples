@@ -94,7 +94,7 @@ public class J8Main {
         favorites.put("Jenny", "Tram");
         System.out.println(favorites); // {Jenny=Tram}
 
-        System.out.println("2) Replace pero solo si no existe un value para el key en el map");
+        System.out.println("2- Replace pero solo si no existe un value para el key en el map");
         favorites.put("Jenny", "Bus Tour");
         favorites.put("Tom", null); // SI ACTUALIZA
         favorites.putIfAbsent("Jenny", "Tram");//NO ACTUALIZA

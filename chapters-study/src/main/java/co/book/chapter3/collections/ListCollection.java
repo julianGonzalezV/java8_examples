@@ -8,6 +8,13 @@ import java.util.List;
  * Using ArrayList allow You  look up any element in constant time
  Adding or removing an element is slower than accessing an element
  good choice when you are reading more often
+ summary:
+
+ Search --> O(1)
+ Insert --> O(n)
+ Remove --> O(n)
+
+
  */
 public class ListCollection {
 
@@ -22,6 +29,7 @@ public class ListCollection {
         list.add("zebras");
         list.add("lions");
         list.add("pandas");
+
         return list;
     }
 

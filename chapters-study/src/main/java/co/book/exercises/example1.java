@@ -9,7 +9,7 @@ public class example1 {
      * entrada input
      * @return
      */
-    public static int example1(List<Integer> inputList){
+    public static int repeatedCounter(List<Integer> inputList){
         System.out.println("example1 Input  => "+inputList);
         /**
          * Por qué Set? R/ Porque ofrece el método add que retorna
@@ -62,11 +62,11 @@ public class example1 {
 
 
     public static void main(String[] args) {
-        example1( Arrays.asList(10, 2, 10, 7, 5, 2, 9, 7, 8, 11,11, 12, 13, 14));
+        repeatedCounter( Arrays.asList(10, 2, 10, 7, 5, 2, 9, 7, 8, 11,11, 12, 13, 14));
         example2( Arrays.asList("a,b,c,a,d,e,b,f,g".split(",")));
 
         /**
-         * hACER LO MISMO PERO FUNCION AL:) :) :)
+         * hACER LO MISMO PERO FUNCIONAL:) :) :)
          */
 
     }

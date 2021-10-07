@@ -1,8 +1,6 @@
 package co.book.exercises;
 
-import java.lang.reflect.Array;
 import java.util.*;
-import java.util.function.Function;
 
 import static java.util.stream.Collectors.groupingBy;
 import static java.util.stream.Collectors.summingInt;
@@ -29,7 +27,7 @@ public class Result {
      * @param arr
      */
     public static void customSort(List<Integer> arr) {
-        // Write your code here
+        System.out.println("Ordenando => "+ arr);
         Map<Integer, Integer> valueFrecuency = arr.stream().collect(groupingBy(x -> x, summingInt(x ->1)));
         Map <Integer, ArrayList<Integer>> frecuencyValue = new TreeMap<>();
         valueFrecuency.forEach((key,value)-> frecuencyValue.put(value, new ArrayList()));
@@ -42,5 +40,6 @@ public class Result {
 
     public static void main(String ... agrs){
         customSort( Arrays.asList(5,3,1,2,2,4));
+        customSort( Arrays.asList(5,3,1,1,2,2,4));
     }
 }

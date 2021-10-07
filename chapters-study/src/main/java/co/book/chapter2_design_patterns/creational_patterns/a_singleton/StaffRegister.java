@@ -3,7 +3,7 @@ package co.book.chapter2_design_patterns.creational_patterns.a_singleton;
 /**
  * Forma de crear #2 using a static block
  */
-// Instantiation using a static block when the class is loades
+// Instantiation using a static block when the class is loaded
 public class StaffRegister {
     private static final StaffRegister instance;
 
