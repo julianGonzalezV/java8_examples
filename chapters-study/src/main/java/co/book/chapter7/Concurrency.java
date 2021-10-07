@@ -39,6 +39,11 @@ Printing zoo inventory
             service.execute(() -> {for(int i=0; i<6; i++)
                 System.out.println(Thread.currentThread().getName()+" Printing record: "+i);}
             );
+            /**
+             * sE RECOMIENDA MAS bien usar submit porque tiene un Futuro como respuesta
+             * anque en este ejemplo nno lo estemos almacendando :) pero eso muestra
+             * la felxibilidad que tiene , es decir que absorve a execute()
+             */
             service.submit(() -> {for(int i=0; i<16; i++)
                 System.out.println(Thread.currentThread().getName()+" Printing submit record: "+i);}
             );

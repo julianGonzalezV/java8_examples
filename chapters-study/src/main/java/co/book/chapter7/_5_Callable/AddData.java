@@ -14,9 +14,9 @@ public class AddData {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         //example1(); //DESOomentar para verificar funcionamiento
         //waitingForAllTasksToFinish();
-        //schedulingTasksEg1();
+        schedulingTasksEg1();
         //repeatedlyTasks1();
-        repeatedlyTasks2();
+        //repeatedlyTasks2();
     }
 
     private static void example1() throws InterruptedException, ExecutionException {
@@ -85,23 +85,43 @@ public class AddData {
      *
      */
     private static void schedulingTasksEg1() throws ExecutionException, InterruptedException {
-        ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
-        Runnable task1 = () -> System.out.println("Ejecutando tarea 1");
-        Callable<String> task2 = () -> {
-            System.out.println("Inicia tarea 2");
-            return "Tarea 2 va a retornar";
-        };
-        Future<?> result1 = service.schedule(task1, 3000, TimeUnit.MILLISECONDS);
-        Future<?> result2 = service.schedule(task2, 7000, TimeUnit.MILLISECONDS);
-       // System.out.println("resultado tarea 2 => "+result2.get());//el get hace que bloquee el hilo, hace wait
-        System.out.println("Esta línea se ejecuta");
-        /**
-         * Note como imprime
-         *sout:
+        ScheduledExecutorService service = null;
+        try {
+            service = Executors.newSingleThreadScheduledExecutor();
+            Runnable task1 = () -> {
+                System.out.println("Ejecutando tarea 1"+Thread.currentThread().getName());
+            };
+            Callable<String> task2 = () -> {
+                System.out.println("Inicia tarea 2"+Thread.currentThread().getName());
+                return "Tarea 2 va a retornar";
+            };
+            Future<?> result1 = service.schedule(task1, 5000, TimeUnit.MILLISECONDS);
+            Future<?> result2 = service.schedule(task2, 8000, TimeUnit.MILLISECONDS);
+            // System.out.println("resultado tarea 2 => "+result2.get());//el get hace que bloquee el hilo, hace wait
+            System.out.println("Esta línea se ejecuta");
+            /**
+             *  Note como en ambos Thread.currentThread().getName()
+             *  retorna el mismo nombre
+             */
+
+            /**
+             * Note como imprime
+             *sout:
              Esta línea se ejecuta
              Ejecutando tarea 1
              Inicia tarea 2
-         */
+             */
+
+        }finally {
+            /**
+             * Validacion de nulidad para no ir a llamar shutdown
+             * sobre algo que es null
+             */
+            if(service != null){
+                System.out.println("shutdown()");
+                service.shutdown();
+            }
+        }
     }
 
     private static void repeatedlyTasks1() {
