@@ -16,9 +16,9 @@ import static java.util.stream.Collectors.toList;
 public class FunctionType {
 
     /**
-     * Function es una interface definida así:
+     * Function es una interface definida asi:
      *public interface Function<T, R> ------>  R apply(T t);
-     *apply sería el metodo que se ejecutaría.
+     *apply seria el metodo que se ejecutaria.
      *El siguiente map es de clave tipo Str y valor tipo Int
      * @return
      */

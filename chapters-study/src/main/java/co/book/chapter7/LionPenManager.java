@@ -19,7 +19,7 @@ public class LionPenManager {
     public void performTask(CyclicBarrier c1, CyclicBarrier c2) {
         try {
             removeAnimals();
-            //al aplicar wait acá el sistema espera hasta qeu el ultimo thread ejecute esta tarea
+            //al aplicar wait aca el sistema espera hasta qeu el ultimo thread ejecute esta tarea
             c1.await();
             cleanPen();
             c2.await();
@@ -45,7 +45,7 @@ public class LionPenManager {
                 //un zookeper limpiando adicionen un animal con el adentro :)
 
                 //Ahora si con esta implementaciÓN estamos seguros que ya todos limpiaron y ahora SI se puede iniciar a
-                //meter animales O QUE ENTREN A LIMPIAR Y ESTÉ EL ANIMCAL ALLÍ :)
+                //meter animales O QUE ENTREN A LIMPIAR Y ESTÉ EL ANIMCAL ALLi :)
                 service.submit(() -> manager.performTask(c1 , c2));
 
         } finally {

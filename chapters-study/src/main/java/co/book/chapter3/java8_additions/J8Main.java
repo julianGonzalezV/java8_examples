@@ -28,7 +28,7 @@ public class J8Main {
          * Supplier::: It doesn’t take any parameters and returns any type
          */
         Supplier<ArrayList> methodRef4 = ArrayList::new; //se llama al constructor vacio
-        Supplier<ArrayList> lambda4 = () -> new ArrayList(); //con labmda es más explicito
+        Supplier<ArrayList> lambda4 = () -> new ArrayList(); //con labmda es mas explicito
 
         /**
          * ::::::::::::::::::::::::::::::::::::: Java 8 list additions:::::::::::::::::::::::::::::::::::::
@@ -114,7 +114,7 @@ public class J8Main {
         favorites2.put("Tom", "Tram");
 
         String jenny = favorites2.merge("Jenny", "Skyride", mapper);
-        //lo anterior quiere deci que si para el key Jenny el valor "Skyride" es más grande del que contenga
+        //lo anterior quiere deci que si para el key Jenny el valor "Skyride" es mas grande del que contenga
         //actualmente enotnces actuliza por Skyride de lo eontrario deja el anterior
         String tom = favorites2.merge("Tom", "Skyride", mapper);
         /**
@@ -132,7 +132,7 @@ public class J8Main {
         Map<String, String> favorites3 = new HashMap<>();
         favorites3.put("Sam", null);
         String v1 = favorites3.merge("Tom", "Skyride", mapper);
-        //Cómo no existe el key "Tom" entonces la función mapper no se llama, pues generería un NullPointerException()
+        //Cómo no existe el key "Tom" entonces la función mapper no se llama, pues genereria un NullPointerException()
         //al hacer v1.lenght()
         String v2 = favorites3.merge("Sam", "Skyride", mapper);
         System.out.println("Valor de las variables: ");
@@ -153,7 +153,7 @@ public class J8Main {
         favorites4.merge("Sam", "Skyride", mapperNull);
         System.out.println(favorites4); // {Tom=Bus Tour, Sam=Skyride}:
         //Jenny se elimina porque se le aplica el mapper to Null
-        //Sam se crea porque no existía
+        //Sam se crea porque no existia
 
 
         /**
@@ -192,7 +192,7 @@ public class J8Main {
         Map<String, Integer> counts3 = new HashMap<>();
         counts3.put("Jenny", 1);
         counts3.computeIfPresent("Jenny", (k, v) -> null); // Debido a que el key Elimina el key del map solo aplica computeIfPresent
-        counts3.computeIfAbsent("Sam", k -> null); // Así exista el Key o no al devolver null la función no hace nada en el caso de computeIfAbsent
+        counts3.computeIfAbsent("Sam", k -> null); // Asi exista el Key o no al devolver null la función no hace nada en el caso de computeIfAbsent
         System.out.println(counts3); // {}
 
 

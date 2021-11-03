@@ -9,7 +9,7 @@ import java.util.List;
  * If your class implements Comparable , it can be used in these data structures that require
  comparison
  *The Comparable interface has only one method
- * public int compareTo(T o): note como aplican generics, evitando así validaciones de tipo
+ * public int compareTo(T o): note como aplican generics, evitando asi validaciones de tipo
  * haciendo casting
  */
 public class DuckComparable implements Comparable<DuckComparable> {
@@ -32,7 +32,7 @@ public class DuckComparable implements Comparable<DuckComparable> {
     @Override
     public int compareTo(DuckComparable o) {
         //return 0;
-        //si tuviera el atributo Id y entero entonce ssería
+        //si tuviera el atributo Id y entero entonce sseria
         //return return id – o.id;
         return name.compareTo(o.name);//si son iguales retorna 0 sino un valor entero positivo cuando el objeto
         //actual es mas grande que contra el que se compara , o <0 si es menor

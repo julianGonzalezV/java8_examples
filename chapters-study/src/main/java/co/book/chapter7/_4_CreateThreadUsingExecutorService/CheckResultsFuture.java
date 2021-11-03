@@ -16,7 +16,7 @@ public class CheckResultsFuture {
             Future<?> result = service.submit(() -> {
                 for(int i=0; i<500000000; i++) CheckResultsFuture.counter++;
             });
-            //el get acá siempre retornará null mas adelante se verá como existen otras clases que si
+            //el get aca siempre retornara null mas adelante se vera como existen otras clases que si
             // devuielven un valor futuro
             result.get(10, TimeUnit.SECONDS);//merme la unidad de tiempo a mili micro o nanno y note como yna de
             //ellas hace que se vaya por el catch porque lo que hace es esperar ése tiempo y si no se completa el futuro

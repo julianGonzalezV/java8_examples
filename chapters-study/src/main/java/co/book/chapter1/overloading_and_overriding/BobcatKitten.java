@@ -4,7 +4,7 @@ import java.io.IOException;
 
 public class BobcatKitten extends Bobcat {
     /**
-     * //Es un OVERRRIDING porque tiene la mista firma qu el padre (mismos parámetros, en este caso cero parametros)
+     * //Es un OVERRRIDING porque tiene la mista firma qu el padre (mismos parametros, en este caso cero parametros)
      *
      */
     public void findDen()  { }
@@ -22,7 +22,7 @@ public class BobcatKitten extends Bobcat {
     public void methodWithExc() throws IOException{ }
 
     /**
-     * Es un OVERLOADING porque especifica más parámetros de entrada
+     * Es un OVERLOADING porque especifica mas parametros de entrada
      * @param b
      */
     public void findDen(boolean b) { }

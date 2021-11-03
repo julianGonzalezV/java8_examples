@@ -3,7 +3,7 @@ package co.book.chapter2_design_patterns.example3;
 import java.util.List;
 
 /**
- * Imaginemos que necesitamos una implementación más elaborada de RaceManager
+ * Imaginemos que necesitamos una implementación mas elaborada de RaceManager
  * Pero el Equipo de desarrollo encargado no ha terminado :0 :(
  * lo que podemos hacer es crear una implementación Dummy e ir adelantando
  * finalmente no puedes jugar con la papita diciendo que no pudiste avanzar por culpa del otro equipo ;)

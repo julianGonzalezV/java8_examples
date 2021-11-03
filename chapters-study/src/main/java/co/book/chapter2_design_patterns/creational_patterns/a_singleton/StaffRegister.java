@@ -12,7 +12,7 @@ public class StaffRegister {
         instance = new StaffRegister();
         // Perform additional steps
         /**
-         * ESTO ES lo clave que acá adentro podemos realiza mas acciones
+         * ESTO ES lo clave que aca adentro podemos realiza mas acciones
          */
     }
 

@@ -5,7 +5,7 @@ import java.util.*;
 public class example1 {
 
     /**
-     * Metodo para contar los elementos que están repetidos en la lista de
+     * Metodo para contar los elementos que estan repetidos en la lista de
      * entrada input
      * @return
      */
@@ -13,14 +13,14 @@ public class example1 {
         System.out.println("example1 Input  => "+inputList);
         /**
          * Por qué Set? R/ Porque ofrece el método add que retorna
-         * si el elemento ya existía o no
+         * si el elemento ya existia o no
          *
          */
         Set<Integer> set = new HashSet<>();
         int counter = 0;
         /*
         La funcion add del set retorna un booleano donde
-        true: Si el elemento se insertó correctamente, dado que no existía
+        true: Si el elemento se insertó correctamente, dado que no existia
         false: contrario a lo anterior
          */
         for (Integer i: inputList ) {
@@ -51,7 +51,7 @@ public class example1 {
         Map<String, Integer> map = new TreeMap<>();
         for (String i: strList ) {
             /*
-             Note como la operacio put devuelve null si el Key no existía
+             Note como la operacio put devuelve null si el Key no existia
              de lo contrario devuelve el valor del Key antes de ser actualizado
              */
             if(map.put(i, 1)!=null) map.replace(i, map.get(i)+1);

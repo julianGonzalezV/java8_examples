@@ -11,7 +11,7 @@ public class FindMatchingAnimals {
     }
 
     /**
-     * Haciendo uso de Predicate, así no tenemos que crear interfaces que reciban un parametro y devuelvan un boolean o
+     * Haciendo uso de Predicate, asi no tenemos que crear interfaces que reciban un parametro y devuelvan un boolean o
      * sin que hacemos uso de lo que ya existe
      * @param animal
      * @param trait

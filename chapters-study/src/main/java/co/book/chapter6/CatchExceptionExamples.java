@@ -28,7 +28,7 @@ public class CatchExceptionExamples {
             //Note como el pipe es uno solo
             System.out.println("Generó error");
             e.printStackTrace();
-            throw new RuntimeException(e);// y así no tiene que duplica esta linea o la anterior en cada catch que realice
+            throw new RuntimeException(e);// y asi no tiene que duplica esta linea o la anterior en cada catch que realice
         }
     }
 
@@ -43,7 +43,7 @@ public class CatchExceptionExamples {
             //porque no sabems la excepcion especifica que sucedió, miesntras que son sngleCatch logicao sabemos cual es
             System.out.println("Generó error");
             e.printStackTrace();
-            throw new RuntimeException(e);// y así no tiene que duplica esta linea o la anterior en cada catch que realice
+            throw new RuntimeException(e);// y asi no tiene que duplica esta linea o la anterior en cada catch que realice
         }
     }
 
@@ -59,7 +59,7 @@ public class CatchExceptionExamples {
             //catch solo de una sola excepcion
             System.out.println("Generó error");
             e.printStackTrace();
-            throw new RuntimeException(e);// y así no tiene que duplica esta linea o la anterior en cada catch que realice
+            throw new RuntimeException(e);// y asi no tiene que duplica esta linea o la anterior en cada catch que realice
         }
     }
 
@@ -83,7 +83,7 @@ public class CatchExceptionExamples {
                 s.nextLine();
             } catch(Exception e) {
                 //s.nextInt(); // DOES NOT COMPILE primero porque el alcance de s es solo hasta que se cierra el try
-            // Segundo porque así se pudiera acceder, implicitamente ya se cerró e recurso
+            // Segundo porque asi se pudiera acceder, implicitamente ya se cerró e recurso
             } finally{
                 //s.nextInt(); // DOES NOT COMPILE
             }

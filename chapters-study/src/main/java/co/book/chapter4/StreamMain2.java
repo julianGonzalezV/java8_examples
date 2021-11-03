@@ -23,8 +23,8 @@ public class StreamMain2 {
 
 
     private static int[] primeFiboNumbers(int n){
-        //importante hacer el reset por ser una variable static, al existir concurrencia puodría fallar el
-        //computo, mientras que así cada computo inicia por reset de la variable
+        //importante hacer el reset por ser una variable static, al existir concurrencia puodria fallar el
+        //computo, mientras que asi cada computo inicia por reset de la variable
         FibonacciGenerator.resetSeries();
        int currentFibVal = FibonacciGenerator.getNext();
        int currentPrimeVal = PrimeGenerator.getNext();
@@ -33,7 +33,7 @@ public class StreamMain2 {
        List<Integer> primeList = new ArrayList<>();
 
        //verificar si es verdad que el limite lo pone el prime Operation, yo lo veo como que es el
-        //prime el que aumenta más rápido entonces si lo limoto al fibo pueda que se pierdan valores
+        //prime el que aumenta mas rapido entonces si lo limoto al fibo pueda que se pierdan valores
        while (currentFibVal<= n ){
            fiboList.add(currentFibVal);
            currentFibVal = FibonacciGenerator.getNext();

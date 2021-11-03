@@ -1,5 +1,5 @@
 has a:
-Relación que se dá cuando dentro de nuestra clase tenemos una referencia de otra clase para de alguna forma componer nuestra clase
+Relación que se da cuando dentro de nuestra clase tenemos una referencia de otra clase para de alguna forma componer nuestra clase
 actual, eje a la clase pajaro la vamos a componer con un pico:
 
 public class Beak {}
@@ -8,7 +8,7 @@ private  Beak beak;
 }
 
 
-Además tenga presente que si usted tiene una clase padre que compuso con un "Has A" }que
+Ademas tenga presente que si usted tiene una clase padre que compuso con un "Has A" }que
 hace referencia a otra clase Y SI UNA CLASE HIJA hereda de la padre entonces la HIJA "HAS A "esa propiedad
 DE LO anterior tenga cuidado en no cometer errores como
 public class Tail {}

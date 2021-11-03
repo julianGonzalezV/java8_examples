@@ -36,7 +36,7 @@ public class MainGenerics {
 
         List<String> keywords = new ArrayList<>();
         keywords.add("java java do");
-        //printList(keywords); // DOES NOT COMPILE, List<String> no se puede asignar a List<Object>, así string sea por en si un object. que es el tipo que
+        //printList(keywords); // DOES NOT COMPILE, List<String> no se puede asignar a List<Object>, asi string sea por en si un object. que es el tipo que
         //recibe la funcion  printList(xx)
         printListV2(keywords); //si funciona porque el wild card ? dice que recibe de todo
 

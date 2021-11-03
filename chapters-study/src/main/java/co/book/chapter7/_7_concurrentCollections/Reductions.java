@@ -59,7 +59,7 @@ public class Reductions {
                     return c + s1;
                 },(s2,s3) -> {
                     //si se quita esta función entonces falla porque para el tipo de dato
-                    //del list en este caso charater no sabría como unir los dos
+                    //del list en este caso charater no sabria como unir los dos
                     return s2+s3;
                 }));
 
@@ -113,7 +113,7 @@ public class Reductions {
          * La siguiente implementación al no cumplir con las reglas de collect(While Collectors.
          toSet() does have the UNORDERED characteristic, it does not have the CONCURRENT
          characteristic;) entonces
-         * no tendrá los beneficios de concurrencia
+         * no tendra los beneficios de concurrencia
          */
         //Set<String> set = stream.collect(Collectors.toSet());
         System.out.println(set); // [f, l, o, w]
@@ -122,7 +122,7 @@ public class Reductions {
 
 
     /**
-     * Version del capitulo 4 pero esta vez con un stream paralelo y además
+     * Version del capitulo 4 pero esta vez con un stream paralelo y ademas
      * una reducción paralela pues toConcurrentMap cumple con las reglas
      */
     static void getStringLength(){
@@ -135,10 +135,10 @@ public class Reductions {
          BinaryOperator<U> mergeFunction)
          *
          *
-         * Lo que se le dice al collect acá es que ConcurrentMap va a ser la estructura final
-         * en que se debe acumular el resultado en donde el key será el tamanio de del string
+         * Lo que se le dice al collect aca es que ConcurrentMap va a ser la estructura final
+         * en que se debe acumular el resultado en donde el key sera el tamanio de del string
          * y el value es eñ string y LA FUNCION DE MERGE es que cada string que tenga el mismo
-         * tamanio se separará por coma ","
+         * tamanio se separara por coma ","
          */
         ConcurrentMap<Integer, String> map = ohMy.collect(
                 Collectors.toConcurrentMap(String::length, k -> k,(s1, s2) -> s1 + "," + s2));
@@ -158,7 +158,7 @@ public class Reductions {
      * Guaranteeing that a particular stream will perform reductions in a parallel, as opposed
      to single-threaded, is often difficult in practice.
      pOR EJEMPLO
-     escoja groupingByConcurrent() sobre groupingBy() y así sucesvamente con todas las
+     escoja groupingByConcurrent() sobre groupingBy() y asi sucesvamente con todas las
      estructuras concurrentes
      * @param args
      */

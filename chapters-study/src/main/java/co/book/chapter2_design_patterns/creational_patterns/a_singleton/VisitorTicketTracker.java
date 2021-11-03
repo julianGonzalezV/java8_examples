@@ -27,11 +27,11 @@ public class VisitorTicketTracker {
             /**
              * Por que NO ES  THREAD-SAFE??
              * 1) En la linea 10 no es final como si lo hace HayStorage : private static final HayStorage instance = new HayStorage();
-             * por lo cual se crea una vez se cargue la clase y no es posible modificarse, ACÁ NO ES FINAL PRECISAMENTE POR E
+             * por lo cual se crea una vez se cargue la clase y no es posible modificarse, here NO ES FINAL PRECISAMENTE POR E
              * VALIDACION de si es null entoncdes retorne un new
              *
              * 2) Imagine 2 hilos accediendo a la misma vez y solicitando getInstance, pues se crearan 2 a la misma vez
-             * y todo lo que pase de allí en adelante es inseguro a nivel de concurrencia
+             * y todo lo que pase de alli en adelante es inseguro a nivel de concurrencia
              *
              * SOLUCIÓN A LO ANTERIOR ES
              *public static synchronized VisitorTicketTracker getInstance(){...
@@ -39,7 +39,7 @@ public class VisitorTicketTracker {
              *
              *
              *
-             * UNA MEJOR SOLUCION ES: DELETING Double‐Checked Locking
+             * UNA MEJOR SOLUCION ES: DELETING DoubleChecked Locking
              *
              * RECUERDE:
              * Thread safety is the property of an object that guarantees safe execution by multiple

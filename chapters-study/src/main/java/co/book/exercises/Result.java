@@ -16,9 +16,9 @@ public class Result {
     /**
      * Explicación de la solución (debe correrlo en versiones de java8 en adelante)
      * > groupingBy se usa para agrupar el array de entrada, dando como resultado un Map
-     * cuya clave será el objeto que estoy iterando y el valor será la frecuencia con que se
+     * cuya clave sera el objeto que estoy iterando y el valor sera la frecuencia con que se
      * repite.
-     * > Se hace uso de TreeMap para asegurar el ordenamiento automático por el Key
+     * > Se hace uso de TreeMap para asegurar el ordenamiento automatico por el Key
      * > Dado que se requieren los elementos repetidos se usa ArrayList, quice usar TreeSet
      * para asegurar el orden pero elimina los repetidos
      * > Dado que arrayList no asegura el orden entonces se usa naturalOrder

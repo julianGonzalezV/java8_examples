@@ -104,8 +104,8 @@ public class SetCollection {
         System.out.println("Set of Numbers: "+ numbersSet());
 
         System.out.println("::::::TreeSet:::::::::");
-        System.out.println("Strings: "+zooTreeSet());//note como se está ordenado :) it used Comparable
-        System.out.println("Numbers: "+ numbersTreeSet());//note como se está ordenado :)
+        System.out.println("Strings: "+zooTreeSet());//note como se esta ordenado :) it used Comparable
+        System.out.println("Numbers: "+ numbersTreeSet());//note como se esta ordenado :)
 
         System.out.println("NavigableSet => ");
         System.out.println("Numbers: "+numbersNavigableSet());

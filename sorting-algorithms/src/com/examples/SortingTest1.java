@@ -1,8 +1,6 @@
 package com.examples;
 
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class SortingTest1 {
 

@@ -34,7 +34,7 @@ Printing zoo inventory
             service = Executors.newSingleThreadExecutor();
             System.out.println("begin  "+Thread.currentThread().getName());
             //Exceute es la primera forma de enviar tareas a un thread
-            //De acá en adelante es el mismo thread
+            //De aca en adelante es el mismo thread
             service.execute(() -> System.out.println(Thread.currentThread().getName()+" Printing zoo inventory"));
             service.execute(() -> {for(int i=0; i<6; i++)
                 System.out.println(Thread.currentThread().getName()+" Printing record: "+i);}
@@ -53,7 +53,7 @@ Printing zoo inventory
             //SUPER IMPORTANTE LLAMAR AL SHUTDOWN
             //Ojo no siempre , isShutdown() and isTerminated() van a ser true cuando se llama a shutdown
             //pues implica que si tiene tareas pendientes entonces la debe terminar por lo cual seria true false
-            //una vez culmina todas sus tareas ahí si sería true true , lo que si se asegura es que el hilo no
+            //una vez culmina todas sus tareas ahi si seria true true , lo que si se asegura es que el hilo no
             //reciba mas computos a realizar.
             //shutdownNow() Intenta detener all threads pero recordar que pueden existir tareas infinitas que se le haya enviado al
             //thread  y este nunca termine

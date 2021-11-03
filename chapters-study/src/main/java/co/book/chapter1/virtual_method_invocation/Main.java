@@ -11,7 +11,7 @@ public class Main {
         if(animal instanceof Cow) {
             ((Cow)animal).addHay();
         } else if(animal instanceof Bird) {
-            ((Bird)animal).addSeed();//note que El Pájaro se alimenta con semilla y no hay/heno
+            ((Bird)animal).addSeed();//note que El Pajaro se alimenta con semilla y no hay/heno
         } else if(animal instanceof Lion) {
             ((Lion)animal).addMeat();//note que El leon se alimenta con meat y no hay
         } else {

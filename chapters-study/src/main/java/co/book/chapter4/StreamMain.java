@@ -36,8 +36,8 @@ public class StreamMain {
 
         //using count
         Stream<String> s = Stream.of("monkey", "gorilla", "bonobo");// 3
-        //System.out.println(s.count()); AL APLICAR UN METODO CMO ESTE Que sería un terminal operartor el stream de
-        // esfuma y no puede volver a ser usado, en éste caso se deberían tener varios streams
+        //System.out.println(s.count()); AL APLICAR UN METODO CMO ESTE Que seria un terminal operartor el stream de
+        // esfuma y no puede volver a ser usado, en éste caso se deberian tener varios streams
 
 
         Stream<String> str = Stream.of("monkey", "ape", "bonobo");
@@ -53,7 +53,7 @@ public class StreamMain {
 
 
         //allMatch() , anyMatch() and noneMatch()
-        //OJO si llamamos noneMatch() or allMatch() en un infinite se hubiera quedado corriendo y tendríamos que
+        //OJO si llamamos noneMatch() or allMatch() en un infinite se hubiera quedado corriendo y tendriamos que
         //matarlo
         System.out.println("allMatch() , anyMatch() and noneMatch()");
         List<String> list = Arrays.asList("monkey", "2", "chimp");
@@ -82,7 +82,7 @@ public class StreamMain {
         //reduce()
         System.out.println("::::::::::::::::::.reduce():::::::::::::::::::::.");
         //The reduce() method combines a stream into a single object
-        // lo siguiente en declarativa sería como un form normal y concatenando en una variable
+        // lo siguiente en declarativa seria como un form normal y concatenando en una variable
         Stream<String> stream = Stream.of("w", "o", "l", "f");
         String word = stream.reduce("", (x, y) -> x + y);
         System.out.println(word);// wolf
@@ -117,7 +117,7 @@ public class StreamMain {
         System.out.println("::::::::::::::::::.Collect in a parallel way:::::::::::::::::::::.");
         //muy importante porque nos permite sacar los datos del stream, en la estructura que necesitemos
         Stream<String> streamCl = Stream.of("w", "o", "l", "f");
-        //Sí miramos la firma de la funcion collect vemos que los BiConsumer serían los StringBuilder
+        //Si miramos la firma de la funcion collect vemos que los BiConsumer serian los StringBuilder
         StringBuilder wordCl = streamCl.collect(StringBuilder::new, StringBuilder::append, StringBuilder::append);
         System.out.println(wordCl);
 
@@ -197,9 +197,9 @@ public class StreamMain {
         System.out.println("::::::::::::::::. peek:::::::::::::::::.");
 
         Stream<String> streamPeek = Stream.of("black bear", "brown bear", "grizzly");
-        //Acá el resultado se guarda en count ..pero que pasaría si desearamos
+        //Aca el resultado se guarda en count ..pero que pasaria si desearamos
         // conocer el motivo por qel cual coutn da 1 o 2 ..etc
-        // Allí es donde estra a jugar la función PEEK lo que hace es
+        // Alli es donde estra a jugar la función PEEK lo que hace es
         long count = streamPeek.filter(elem -> elem.startsWith("b")).peek(System.out::println).count();
         System.out.println(count);
 
@@ -210,7 +210,7 @@ public class StreamMain {
         //EJERCICIOS::::
 
         /*dado un listado de nombres se debe obtener solo los 2 primeros
-         en donde el tamño del nombre sea de 4 caracteres, además deben estar ordenados
+         en donde el tamño del nombre sea de 4 caracteres, ademas deben estar ordenados
          elfabeticamente
         Ejemplo: el siguiente listado como entrada ("Toby", "Anna", "Leroy", "Alex")
         debe retornar ("Alex", "Anna")

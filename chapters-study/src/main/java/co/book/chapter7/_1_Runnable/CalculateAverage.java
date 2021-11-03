@@ -17,7 +17,7 @@ public class CalculateAverage implements Runnable {
     private double[] scores;
 
     /**
-     * Se pueden pasar argumentos para que se puedan usan en el método run()
+     * Se pueden pasar argumentos para que se puedan usan en el metodo run()
      * @param scores
      */
     public CalculateAverage(double[] scores) {
@@ -27,6 +27,6 @@ public class CalculateAverage implements Runnable {
     @Override
     public void run() {
         // Define work here
-        // puede usar el atributo scores acá
+        // puede usar el atributo scores aca
     }
 }

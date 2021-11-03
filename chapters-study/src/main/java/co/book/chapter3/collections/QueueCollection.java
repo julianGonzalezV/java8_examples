@@ -122,7 +122,7 @@ public class QueueCollection {
         System.out.println(numbersArrayDequeLifo());
 
         /**LinkeList funciona exactamente igual que ArrayDeque, pero recuerde que a nivel
-        de performance la teoría recomienda ArrayDeque*/
+        de performance la teoria recomienda ArrayDeque*/
         System.out.println(":::::::::::::::LinkedList => ");
         System.out.println(numbersLinkedListFifo());
         System.out.println(numbersLinkedListLifo());

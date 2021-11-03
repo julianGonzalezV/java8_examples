@@ -20,7 +20,7 @@ public class MainDataStructure {
 
 
         /**
-         * Cuando lo cree así no puede especificar el tamanio, genera error de sintaxis
+         * Cuando lo cree asi no puede especificar el tamanio, genera error de sintaxis
          */
         int[] numbers2 = new int[] {99, 55, 42};
         System.out.println(numbers2[2]);
@@ -44,7 +44,7 @@ public class MainDataStructure {
         //againStrings[0] = new StringBuilder(); // DOES NOT COMPILE, error de complación
         //objects[0] = new StringBuilder();// sea cuidadoso!, genera error en tiempo de ejecución
         //porque objects es igual a un array de strings, si furea igual a un array de object no
-        //generaría el error
+        //generaria el error
 
 
         /**
@@ -65,7 +65,7 @@ public class MainDataStructure {
         System.out.println(Arrays.binarySearch(numbers, 4));
         System.out.println(Arrays.binarySearch(numbers, 1));
         System.out.println(Arrays.binarySearch(numbers, 3));
-        System.out.println(Arrays.binarySearch(numbers,9)); //-5 PORQUE EL 9 debería ir despues del 3 posicion del array (el 8)
+        System.out.println(Arrays.binarySearch(numbers,9)); //-5 PORQUE EL 9 deberia ir despues del 3 posicion del array (el 8)
         //osea en la posición 4 , lo que hace java es negarlo a -4y le resta -1 = -5
 
         /**
@@ -74,9 +74,9 @@ public class MainDataStructure {
         int[][] vars1;// 2D array
         int vars2 [][];// 2D array
         int[] vars3[];// 2D array
-        int[] vars4 [], space [][]; // a 2D AND a 3D array en una sola línea, confuso pero no enrredarse
+        int[] vars4 [], space [][]; // a 2D AND a 3D array en una sola linea, confuso pero no enrredarse
 
-        String [][] rectangle = new String[3][2];// es un array de 3 posiciones y cada posición contendrá
+        String [][] rectangle = new String[3][2];// es un array de 3 posiciones y cada posición contendra
         //otro array de 2  posiciones
 
 
@@ -201,7 +201,7 @@ public class MainDataStructure {
          */
 
         /**
-         * Autoboxing; convertir automáticamente deprimtivo a wrapper class
+         * Autoboxing; convertir automaticamente de primtivo a wrapper class
          */
         List<Double> weights = new ArrayList<>();
         weights.add(50.5);// [50.5]
@@ -220,7 +220,7 @@ public class MainDataStructure {
         numbers31.add(1);
         numbers31.add(2);
         numbers31.remove(1);// ṕor ser la lista de tipo wrapper class, remove(1) no quiere decir que
-        //borre el elementyo cuyo valor sea 1 sino que borre la posición 1
+        //borre el elemento cuyo valor sea 1 sino que borre el elemento en el index/posición 1
         System.out.println(numbers31);
 
 
@@ -245,7 +245,7 @@ public class MainDataStructure {
         String[] array = { "hawk", "robin" }; // [hawk, robin]
         List<String> list11 = Arrays.asList(array); // returns fixed size list
         System.out.println(list11.size()); // 2
-        list11.set(1, "test"); // [hawk, test], note como los cambios en list11 afectan el array, están ligadas por memoria
+        list11.set(1, "test"); // [hawk, test], note como los cambios en list11 afectan el array, estan ligadas por memoria
         //si esto no es lo que desea pruebe creando una copia
         array[0] = "new"; // [new, test]
         for (String b : array) System.out.println(b + " - "); // new test

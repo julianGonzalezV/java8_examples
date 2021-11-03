@@ -120,7 +120,7 @@ public class CreatingMain {
         Period wrong = Period.ofMonths(1).ofWeeks(1);// EL tal encademaniendo en Period NO EXISTE
         //lo anterior es comi lo que sigue
         Period wrong2 = Period.ofYears(1);
-        wrong2 = Period.ofWeeks(1);//está reasignando
+        wrong2 = Period.ofWeeks(1);//esta reasignando
 
         Period wrongOK = Period.of(0, 1, 7); // 1  mes y una semana
 
@@ -131,7 +131,7 @@ public class CreatingMain {
 
         /**
          * Working with Durations
-         * Ya que period  llega hasta días entonces se cuenta con durations que permite
+         * Ya que period  llega hasta dias entonces se cuenta con durations que permite
          * unidad mas detallada number of days, hours, minutes, seconds, or nanosecond
          */
 
@@ -195,7 +195,7 @@ public class CreatingMain {
 
         System.out.println(dateTime3); // 2016–03–13T01:30–05:00[US/Eastern]
 
-        dateTime3 = dateTime3.plusHours(1);// al sumarle una hora pesariamos que quedaría la nueva hora a la 02:30
+        dateTime3 = dateTime3.plusHours(1);// al sumarle una hora pesariamos que quedaria la nueva hora a la 02:30
 
         System.out.println(dateTime3); // 2016–03–13T03:30–04:00[US/Eastern] ups son las 03:30
         //el valor anterior es por que en horario de verano los relojes se deben ajustar y Java8 ya lo tiene en cuenta
@@ -213,7 +213,7 @@ public class CreatingMain {
     }
 
     /**
-     * Este código es más geberico que el anterior dado que recibe comoparametro un Period
+     * Este código es mas geberico que el anterior dado que recibe comoparametro un Period
      * asi cuando no deseemmo que sea cada mes sino cada mes y 1 semana se enviaria dicha configuración
      * en el period
      * @param start

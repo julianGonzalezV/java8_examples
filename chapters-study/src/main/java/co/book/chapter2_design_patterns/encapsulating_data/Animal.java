@@ -30,7 +30,7 @@ public class Animal {
 
     /**
      * haciendo cumplir la invariante
-     * un set solo quizás no tenga sentido pero cuando se colocan reglas como estas ya empieza a
+     * un set solo quizas no tenga sentido pero cuando se colocan reglas como estas ya empieza a
      * tomar forma
      * @param age
      */

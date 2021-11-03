@@ -11,7 +11,7 @@ public class MainFuncInterface {
         FindMatchingAnimals.print(new Animal("kangaroo", true, false), a -> a.canHop());
         //imprime lo que se coloque en el toString() en esta caso el atributo speciesName kangaroo
 
-        //llamado vía method reference
+        //llamado via method reference
         FindMatchingAnimals.print(new Animal("kangaroo", true, false), Animal::canHop);
 
         /**
@@ -28,7 +28,7 @@ public class MainFuncInterface {
 
         /*
         (int y, z) -> {int x=1; return y+10; }// DOES NOT COMPILE debido que que el primer parametro espcifica el tipo
-        //entonces los demás parámetros también deben o quitar el tipo del primero
+        //entonces los demas parametros también deben o quitar el tipo del primero
         (String s, z) -> { return s.length()+z; }// DOES NOT COMPILE
         (a, Animal b, c) -> a.getName()// DOES NOT COMPILE
 

@@ -11,11 +11,11 @@ public class PrintDataExtendThread extends Thread {
 
     public static void main(String[] args) {
         /**
-         * Note coo el thread de acá es el main
+         * Note que el thread de aca es el main
          */
         System.out.println("External Thread --->"+Thread.currentThread().getName());
         /**
-         * A partir de ahora se crearan más
+         * A partir de ahora se crearan mas
          */
         new PrintDataExtendThread().start();
         new PrintDataExtendThread().start();

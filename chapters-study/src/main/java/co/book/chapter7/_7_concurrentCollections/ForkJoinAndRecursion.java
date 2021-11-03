@@ -48,9 +48,9 @@ public class ForkJoinAndRecursion {
         ForkJoinTask<Double> task = new WeighAnimalActionCarryingAResult(weights,0,weights.length);
         ForkJoinPool pool = new ForkJoinPool();
         /**
-         * por la definicioa de ForkJoinTask<Double>, no es necesario hacer casting acá de
+         * por la definicioa de ForkJoinTask<Double>, no es necesario hacer casting aca de
          * (Double)pool.invoke(task) porque ya se infiere, quite el Double de ForkJoinTask<Double>, y
-         * notaráque le pide casting
+         * notaraque le pide casting
 
          */
         Double result = pool.invoke(task);
@@ -94,7 +94,7 @@ public class ForkJoinAndRecursion {
 }
 
 /**
- * Versoin que hace uso del método cmpute de la clase RecursiveAction o más bien de fork jpin
+ * Versoin que hace uso del método cmpute de la clase RecursiveAction o mas bien de fork jpin
  * que es la que hereda RecursiveAction
  */
 class WeighAnimalAction extends RecursiveAction {
@@ -117,7 +117,7 @@ class WeighAnimalAction extends RecursiveAction {
     protected void compute() {
         if(end-start <= 3)
         /**
-         * desde start hasta end, siendo ambos el # del workera realizar la tarea,
+         * desde start hasta end, siendo ambos el # del worker a realizar la tarea,
          * en este caso pesar los animales :)
          */
             for(int i=start; i<end; i++) {
@@ -129,8 +129,8 @@ class WeighAnimalAction extends RecursiveAction {
             System.out.println("[start="+start+",middle="+middle+",end="+end+"]");
             /**
              * invokeAll viene de la clase ForkJoinTask ya que RecursiveAction extends ForkJoinTask
-             * pasndole 2 instancias cuando la cantidad de end-start es mayor que 3
-             * Note el llamado recursivo pues se ejecutará el método WeighAnimalAction.compute
+             * pasandole 2 instancias cuando la cantidad de end-start es mayor que 3
+             * Note el llamado recursivo pues se ejecutara el método WeighAnimalAction.compute
              * en cada división
              */
             invokeAll(new WeighAnimalAction(weights,start,middle),
@@ -165,7 +165,7 @@ class WeighAnimalActionCarryingAResult extends RecursiveTask {
     @Override
     protected Double compute() {
         if(end-start <= 3){
-            // se crea nueva variable suma que llevará la suma de todos los pesos
+            // se crea nueva variable suma que llevara la suma de todos los pesos
             double suma = 0;
             for(int i=start; i<end; i++) {
                 weights[i] = (double)new Random().nextInt(100);

@@ -71,18 +71,18 @@ public class StringExcercise {
         return inputList.isEmpty();
     }
 
+    /*
     public static boolean isRansomWordV2(String inputStr, String fullStr){
         StringBuilder sb = new StringBuilder(inputStr);
-        sb.delete()
-        String[] fullStrs = fullStr.split(" ");
+        //sb.delete()
         String[] fullStrs = fullStr.split(" ");
         for(int i = 0; i<fullStrs.length; i++){ // O(n)
-            if(inputList.contains(fullStrs[i])){ // Contains is O(n) it is implemented on indesOf()
-                inputList.remove(fullStrs[i]);
+            if(inputStr.contains(fullStrs[i])){ // Contains is O(n) it is implemented on indesOf()
+                inputStr.remove(fullStrs[i]);
             }
         }//Then O(n exp 2)
-        return inputList.isEmpty();
-    }
+        return inputStr.isEmpty();
+    }*/
 
 
 

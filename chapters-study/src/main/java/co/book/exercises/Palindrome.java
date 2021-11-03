@@ -23,9 +23,6 @@ public class Palindrome {
         for (Character s: chain.toCharArray()) {
             setValues.add(s);
         }
-
-
-
         return (setValues.size() == 1);
     }
     public static void main(String... args){

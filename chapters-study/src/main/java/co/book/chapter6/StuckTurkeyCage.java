@@ -20,7 +20,7 @@ public class StuckTurkeyCage implements AutoCloseable {
 
         /**
          * si no se coloca throws Exception en el main o se hace un catch no
-         * compilala siguiente línea
+         * compilala siguiente linea
          */
         try (StuckTurkeyCage t = new StuckTurkeyCage()) { // DOES NOT COMPILE
             System.out.println("put turkeys in");
@@ -35,8 +35,8 @@ public class StuckTurkeyCage implements AutoCloseable {
 
 
     /**
-     * Que pasa si además del exception que lanza el close() de StuckTurkeyCage dentro del
-     * TRY tambien lanzara una? R/ Ahí es cuando aparece suppressedException
+     * Que pasa si ademas del exception que lanza el close() de StuckTurkeyCage dentro del
+     * TRY tambien lanzara una? R/ Ahi es cuando aparece suppressedException
      * manera en que java sabe acerca de una excepcion principal(la del try) y la
      * excepciOn CONTENIDA
      */

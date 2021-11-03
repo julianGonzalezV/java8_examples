@@ -6,7 +6,7 @@ import java.util.function.Supplier;
 
 
 /**
- * No recibe parámetros y retorna un valor
+ * No recibe parametros y retorna un valor
  */
 public class SupplierMain {
 

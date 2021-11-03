@@ -24,7 +24,7 @@ public class HayStorage {
     private static final HayStorage instance = new HayStorage();
 
     /**
-     * Singletons se acceden vía public static, porque no se puede crear instancia en otras partes sino
+     * Singletons se acceden via public static, porque no se puede crear instancia en otras partes sino
      * @return
      */
     public static HayStorage getInstance() {
@@ -32,7 +32,7 @@ public class HayStorage {
     }
 
     /**
-     * synchronized para eviater que 2 o más procesos correan el mismo método al mismo tiempo
+     * synchronized para eviater que 2 o mas procesos correan el mismo método al mismo tiempo
      *  RECORDAR QUE EN LA LITERATURA ESO ES CONSIDERADO BLOQUEANTE
      * @param amount
      */

@@ -12,9 +12,9 @@ public class CheckResultsV1 {
         vaya a la V2 si quiere visualizar una mejor manera*/
 
         new Thread(() -> {
-            for(int i=0; i<500; i++) CheckResultsV1.counter++;
+            for(int i=0; i<100000; i++) CheckResultsV1.counter++;
         }).start();
-        while(CheckResultsV1.counter<100) {
+        while(CheckResultsV1.counter<25000) {
             System.out.println("Not reached yet");
         }
         System.out.println("Reached!");

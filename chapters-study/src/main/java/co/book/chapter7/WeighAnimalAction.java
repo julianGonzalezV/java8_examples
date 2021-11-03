@@ -39,7 +39,7 @@ public class WeighAnimalAction extends RecursiveAction {
         //espera hasta que se vayan liberando
 
         ForkJoinTask<?> task = new WeighAnimalAction(weights,0,weights.length);
-        //ForkJoinPool por defecto verifica los números de procesadores de la máquina
+        //ForkJoinPool por defecto verifica los números de procesadores de la maquina
         // para saber cuantos hilos iniciar
         ForkJoinPool pool  = new ForkJoinPool();
         pool.invoke(task);

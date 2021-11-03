@@ -26,11 +26,11 @@ public class MiCallable implements Callable<Integer> {
 
     public static void main(String[] args) throws Exception {
         /**
-         * Note coo el thread de acá es el main
+         * Note coo el thread de aca es el main
          */
         System.out.println("External Thread --->"+Thread.currentThread().getName());
         /**
-         * A partir de ahora se crearan más
+         * A partir de ahora se crearan mas
          */
         new MiCallable().call();
         new MiCallable().call();

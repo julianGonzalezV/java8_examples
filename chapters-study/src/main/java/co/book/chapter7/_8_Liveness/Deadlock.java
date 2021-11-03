@@ -5,10 +5,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 /**
- * reornará
+ * reornara
  * pool-1-thread-1 Got Food!
  pool-1-thread-2 Got Water!
- ambos threads se quedarán bloqueados
+ ambos threads se quedaran bloqueados
 
  */
 public class Deadlock {
@@ -69,7 +69,7 @@ class Fox {
     public void move() {
         try {
             /**
-             * Entre mayor sea el número, mayor tiempo esperará el hilo actual
+             * Entre mayor sea el número, mayor tiempo esperara el hilo actual
              */
             Thread.sleep(100);
         } catch (InterruptedException e) {

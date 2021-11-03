@@ -2,7 +2,7 @@ package co.book.chapter3.generics;
 
 /**
  * 1ra opción para implementar Shippable (Clase concreta)
- * Interface que solo envía cebras
+ * Interface que solo envia cebras
  */
 public class ShippableZebraCrate implements Shippable<Zebra> {
     @Override

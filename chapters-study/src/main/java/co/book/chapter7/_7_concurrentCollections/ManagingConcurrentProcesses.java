@@ -34,10 +34,10 @@ public class ManagingConcurrentProcesses {
              * a los hilos especificados en new CyclicBarrier(3)
              * porque si es menor se va a colgar el computo.
              * Ejemplo:
-             * >El CyclicBarrier se terminará cuando 3 hilos lo invoquen
+             * >El CyclicBarrier se terminara cuando 3 hilos lo invoquen
              * >Usted lanza un pool de 2 hilos
-             * > El CyclicBarrier nunca caerá porque estará esperando a que ése
-             * 3cer hilo se ejecute, pero nunca abrá un 3ro ud definió un pool de 2!!!
+             * > El CyclicBarrier nunca caera porque estara esperando a que ése
+             * 3cer hilo se ejecute, pero nunca abra un 3ro ud definió un pool de 2!!!
              *
              */
             service = Executors.newFixedThreadPool(9);
@@ -59,7 +59,7 @@ class LionPenManager{
         /**
          * Ojo el syso comentado lo coloque por probar y esto hizo que por algún motivo se corra este
          * método llamando secuencialmente sus métodos internos y al parecer solo lo ejecuta un solo hilo
-         * comentado se nota como varios hilos lo puede agarrar ya qu epuede salir varias veces
+         * comentado se nota como varios hilos lo puede agarrar ya que puede salir varias veces
          * Removing animals
          Removing animals
          */
@@ -75,7 +75,7 @@ class LionPenManager{
              * Wow note como se ejecuta primero toodos y solo todos los llamados EN
              * UN SOLO PASO DE Removing animals, luego
              * Luego se ejecuta el cleanPen() tambien todos
-             * y finalmente ahí si se hace addAnimals()
+             * y finalmente ahi si se hace addAnimals()
              * para que no se coman a las personas de mantenimiento del
              * zoo
              */
@@ -83,9 +83,9 @@ class LionPenManager{
             /**
              * cON WAIT DE C1 todos los hilos haran un stop dado que existe esta barrera y hasta que todos
              * los hilo no ejecuten este método no pueden pasar en el proceso
-             * RECURDE QUYE  EN ESTE CASO removeAnimals() está siendo ejecutado en paralelo
+             * RECURDE QUE  EN ESTE CASO removeAnimals() esta siendo ejecutado en paralelo
              */
-            //el sgte CyclicBarrier fu'e configirado para esperar 3 hilos
+            //el sgte CyclicBarrier fue configurado para esperar 3 hilos (ver el main que lo llama)
             //pero si su llamado tienen 9 hilos al llegar los 3 el CyclicBarrier vuelve y se activa
             //para esperar ootros 3 hilos
             c1.await();

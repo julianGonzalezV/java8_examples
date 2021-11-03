@@ -3,7 +3,7 @@ package co.book.chapter2_design_patterns.example4_functional_interfaces.Polymorp
 public class Main {
     public static void main(String[] args) {
         /**
-         * acá es puro polimorfismo
+         * aca es puro polimorfismo
          * solo se crea un objeto y se pasa a una vriable hasTail y primate, ambas
          * se conocen como referecias o reference y a que hace referencia? pues a un objeto en memoria en este caso
          * a lemur
@@ -43,7 +43,7 @@ public class Main {
         Lemur lemur2 = new Lemur();
         int v1 = lemur2.age;
         //el objeto Lemur se asignada a una referencia de tipo diferente
-        //acá por ejemplo paorvechamos la caracteristica de que todos los objetos
+        //aca por ejemplo paorvechamos la caracteristica de que todos los objetos
         //heredan de java.lang.Object
         Object lemurAsObject = lemur2;
         //lemurAsObject.age;
@@ -63,8 +63,8 @@ public class Main {
          *  1. Casting an object from a subclass to a superclass doesn’t require an explicit cast.
             2. Casting an object from a superclass to a subclass requires an explicit cast.
             3. The compiler will not allow casts to unrelated types. IMPORTANTE!!
-                - Esto es que si no hay relación mediante algún mecanismo de herencia entonces fallará
-                - Además de que también puede existir error en tiempo de ejecución, use instanceof para evitar ESTO;
+                - Esto es que si no hay relación mediante algún mecanismo de herencia entonces fallara
+                - Ademas de que también puede existir error en tiempo de ejecución, use instanceof para evitar ESTO;
 
          public class Rodent {
          }

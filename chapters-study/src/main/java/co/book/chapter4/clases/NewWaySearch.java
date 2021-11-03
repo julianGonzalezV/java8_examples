@@ -22,8 +22,8 @@ public class NewWaySearch {
         print(animals, a -> a.canSwim());
         //lo leo de la siguiente manera:
         //print es un método que recibe un listado y una implementación del trait CheckTrait
-        // del segundo parámetro YA LE ESTAMOS ENVIANDO DE ENTRADA LA implementación que se desea , por ejemplo para
-        //swim se le dice al trait que debe tener una funcion que reciba un Animal a y devuelve un boolean y DICHO BOOLEAN SERÁ
+        // del segundo parametro YA LE ESTAMOS ENVIANDO DE ENTRADA LA implementación que se desea , por ejemplo para
+        //swim se le dice al trait que debe tener una funcion que reciba un Animal a y devuelve un boolean y DICHO BOOLEAN SERa
         // EL A.CANsWIM
 
         // con la forma de TraditionalSearch.java hubieramos tenido que crear 2 clases que implementen de la interfcae

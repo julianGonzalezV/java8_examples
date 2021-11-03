@@ -63,7 +63,7 @@ public class Duck implements Comparable<Duck> {
         Comparator<Duck> byWeight5 = (d1, d2) -> DuckHelper.compareByWeight(d1, d2);
         Comparator<Duck> byWeight6 = DuckHelper::compareByWeight;
         /** lo anterior dice es eyy sabemos que comparator necesita que se le implemente el compare(d1, d2)
-         * que recibe dos parámetrros y retorna un entero (esa es su firma), ahora que habrá en DuckHelper
+         * que recibe dos parametrros y retorna un entero (esa es su firma), ahora que habra en DuckHelper
          * que cumpla con la firma......R/ pues el compareByWeight
          *
          * OJO LA SITAXIS xxx::yyy lo que retorna es lafunción yyy() y no el retorno de la funcion yyy(),

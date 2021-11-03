@@ -4,7 +4,7 @@ package co.book.chapter7._3_pollingWithSleep;
 /**
  * Ejemplo de Polling(getting any info) with Sleep
  * Ojo que igual se puede generar el bloqueo muto por ejemplo que pasa si se esta realizando un
- * Poll de alguna variable compartida como en este caso Counter y otro thread lo está cambiando??
+ * Poll de alguna variable compartida como en este caso Counter y otro thread lo esta cambiando??
  */
 public class CheckResultsV2 {
     private static int counter = 0;

@@ -11,12 +11,12 @@ public class StateLessVsStateFul {
      *Se recomeinda usar la version synchronized de List para
      * situaciones de concurrencia, ya que por ejemplo en ArrayList
      * pueda que dos hilos vayan a incrementar el tamaño del array
-     * y queden una posición adicional vacía en la estructura
+     * y queden una posición adicional vacia en la estructura
      */
     public static void stateFul(){
         List<Integer> data = Collections.synchronizedList(new ArrayList<>());
-        //Al hacer data.add(i) ya se está modificando el estado
-        //Evite esto al máximo
+        //Al hacer data.add(i) ya se esta modificando el estado
+        //Evite esto al maximo
         Arrays.asList(1,2,3,4,5,6).parallelStream()
                 .map(i -> {data.add(i); return i;}) // AVOID STATEFUL LAMBDA EXPRESSIONS!
                 .forEachOrdered(i -> System.out.print(i+" "));
@@ -29,12 +29,12 @@ public class StateLessVsStateFul {
     /**
      * Note que si NO usa la version synchronizedList (que si se usa en stateFul), la salida puede
      * generar valores inesperados pueda que dos hilos vayan a incrementar el tamaño del array
-     * y queden una posición adicional vacía en la estructura
+     * y queden una posición adicional vacia en la estructura
      */
     public static void stateFulRegularArray(){
         List<Integer> data = new ArrayList<>();
-        //Al hacer data.add(i) ya se está modificando el estado
-        //Evite esto al máximo
+        //Al hacer data.add(i) ya se esta modificando el estado
+        //Evite esto al maximo
         Arrays.asList(1,2,3,4,5,6).parallelStream()
                 .map(i -> {data.add(i); return i;}) // AVOID STATEFUL LAMBDA EXPRESSIONS!
                 .forEachOrdered(i -> System.out.print(i+" "));
@@ -53,7 +53,7 @@ public class StateLessVsStateFul {
 
         /**
          * Ojo debe tener en cuenta que existen ordered operations que lo que quiere decir es que
-         * así se ejecuten sobre serial o parallel structures el resultado será el mismo para ambos
+         * asi se ejecuten sobre serial o parallel structures el resultado sera el mismo para ambos
          * pues las operaciones son Ordered, lo que si puede pasar es que en paraller structures
          * el performance se dañe notoriamente
          */

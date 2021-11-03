@@ -19,7 +19,7 @@ public class SheepManagerV3 {
 
             for(int i=0; i<180; i++) {
                 /**
-                 * El problema aún no se resuelve porque se está
+                 * El problema aún no se resuelve porque se esta
                  */
                 synchronized (manager) {
                     service.submit(() -> manager.incrementAndReport());

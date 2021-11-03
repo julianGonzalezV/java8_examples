@@ -72,7 +72,7 @@ public class PerformanceImprovement {
       * el performace mejora!
       *
       * Muy util para operaciones independienets!!!
-      * OJO Para tamanio pequeños de datos quizás ni se note la mejora
+      * OJO Para tamanio pequeños de datos quizas ni se note la mejora
       * y no todo Stream debe computarse paralelamente
       *
       * @param data

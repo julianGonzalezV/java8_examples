@@ -29,14 +29,14 @@ public class AddData {
             });
             /**
              * OJO note como esta tarea se puede ejecutar y continua con la
-             siguiente línea, PEEROOOO si esta línea se coloca despues del System.out.println("Result Get es => "+result.get())
+             siguiente linea, PEEROOOO si esta linea se coloca despues del System.out.println("Result Get es => "+result.get())
              no se ejecuta hasta que termine o se resuelva el futuro PORQUE lo necesita al hacer result.get()
              */
             System.out.println("Soy otra tarea ");
             System.out.println("Result Get es => "+result.get());//el get hace wait
-            //Note como acá pordemos obtener el resultado
-            //con runnable también es posible pero con una variable static pero note la simplicidad acá
-            //PARA CONCURRENCY por lo general esta es la interface preferida por los developers (dice la teoría)
+            //Note como aca pordemos obtener el resultado
+            //con runnable también es posible pero con una variable static pero note la simplicidad aca
+            //PARA CONCURRENCY por lo general esta es la interface preferida por los developers (dice la teoria)
 
 
         } finally {
@@ -61,8 +61,8 @@ public class AddData {
         }
 
         /**
-         * * OJO shutdown no cancela las tareas que ya se habían enviado previamente al hilo, sino que
-         * espera que se se ejecuten y ahí si se termina POR ESO PUEDE LLEGAR A ESTA LÍNEA Y PREGUNTAR
+         * * OJO shutdown no cancela las tareas que ya se habian enviado previamente al hilo, sino que
+         * espera que se se ejecuten y ahi si se termina POR ESO PUEDE LLEGAR A ESTA LNEA Y PREGUNTAR
          * LO SIGUIENTE
          */
         if(service != null) {
@@ -70,7 +70,7 @@ public class AddData {
             // Check whether all tasks are finished
             if(service.isTerminated())
                 System.out.println("All tasks finished");
-            //escriba acuí lo que desee cuando tooodas
+            //escriba acui lo que desee cuando tooodas
             //las tareas se terminan
             else
                 System.out.println("At least one task is still running");
@@ -98,7 +98,7 @@ public class AddData {
             Future<?> result1 = service.schedule(task1, 5000, TimeUnit.MILLISECONDS);
             Future<?> result2 = service.schedule(task2, 8000, TimeUnit.MILLISECONDS);
             // System.out.println("resultado tarea 2 => "+result2.get());//el get hace que bloquee el hilo, hace wait
-            System.out.println("Esta línea se ejecuta");
+            System.out.println("Esta linea se ejecuta");
             /**
              *  Note como en ambos Thread.currentThread().getName()
              *  retorna el mismo nombre
@@ -107,7 +107,7 @@ public class AddData {
             /**
              * Note como imprime
              *sout:
-             Esta línea se ejecuta
+             Esta linea se ejecuta
              Ejecutando tarea 1
              Inicia tarea 2
              */

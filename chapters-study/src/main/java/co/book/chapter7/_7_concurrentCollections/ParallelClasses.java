@@ -9,7 +9,7 @@ public class ParallelClasses {
     /**
      * Creando un stream paralelo desde un stream sencillo
      * la idea de paralelo es que cada elementos se pude procesar por un hilo diferente
-     * algo así como atender a la vez a todos las personas en una fila :)
+     * algo asi como atender a la vez a todos las personas en una fila :)
      */
     public static Stream<Integer>  example1(){
         Stream<Integer> stream = Arrays.asList(1,2,3,4,5,6).stream();

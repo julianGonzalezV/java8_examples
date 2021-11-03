@@ -5,7 +5,7 @@ package co.book.chapter2_design_patterns.Composing;
  * Es decir para armar un penguin necesito esa composición (ingredientes)
  *
  * UNA DE LAS VENTAJAS DE COMPOSITION sobre inheritance es que compositions promueve mas
- * reutilización de código, ejemplo Flippers puede ser reutilizado en muchas partes más
+ * reutilización de código, ejemplo Flippers puede ser reutilizado en muchas partes mas
  * donde aplique
  */
 public class Penguin {

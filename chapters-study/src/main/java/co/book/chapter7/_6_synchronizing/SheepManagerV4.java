@@ -7,21 +7,23 @@ public class SheepManagerV4 {
     private int sheepCount = 0;
 
     /**
-     * A diferencia de la V3 acá se sicroniza la ejecución de la tarea :)
-     * OJO: ADEMÁS ASÍ SIEMPRE ASEGURARÁ EL ORDEN!!! PORque se sincrinizó la ejecución en lugar de la +
+     * A diferencia de la V3 aca se sicroniza la ejecución de la tarea :)
+     * OJO: ADEMaS ASi SIEMPRE ASEGURARa EL ORDEN!!! PORque se sincronizó la ejecución en lugar de la
      * creacipon como en la V3
      */
     private void incrementAndReport() {
         synchronized (this) {
         System.out.print((++sheepCount +" "));
+        }
     }
-}
 
     /**
      * El método anterior y este son lo mismo solo cambia la ubicación de
      * synchronized
      */
     private synchronized void  incrementAndReport2() {
+        System.out.println(Thread.currentThread().getName()+ " contador = "+ sheepCount);
+
             System.out.print((++sheepCount +" "));
     }
 
@@ -35,8 +37,8 @@ public class SheepManagerV4 {
 
             for(int i=0; i<180; i++) {
                 /**
-                 * Ojo acá se crean los hilos y se envian a ejecutar peeero
-                 * al estar el método de ejecuciín "incrementAndReport" con synchronized
+                 * Ojo aca se crean los hilos y se envian a ejecutar peeero
+                 * al estar el método de ejecucion "incrementAndReport" con synchronized
                  * entonces los hilos deben de esperar
                  */
                     service.submit(() -> manager.incrementAndReport2());

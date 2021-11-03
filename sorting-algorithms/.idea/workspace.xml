@@ -2,13 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75c19dbd-5e60-44c5-ae3c-586e4878ed11" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/CheckTrait.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/CheckTrait.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/Sprint.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/Sprint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/collections/MapCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/collections/MapCollection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/ReadFileGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/concurrency/AThread.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/concurrency/BRunnable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/examples/MergeSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/trees/BinaryTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/java8_examples.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter1/overloading_and_overriding/BobcatKitten.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter1/overloading_and_overriding/BobcatKitten.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter1/readme" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter1/readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter1/virtual_method_invocation/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter1/virtual_method_invocation/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/Composing/Penguin.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/Composing/Penguin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/a_singleton/HayStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/a_singleton/HayStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/a_singleton/StaffRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/a_singleton/StaffRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/a_singleton/VisitorTicketTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/a_singleton/VisitorTicketTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/d_factory/Fish.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/d_factory/Fish.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/d_factory/Hay.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/d_factory/Hay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/d_factory/Pellets.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/d_factory/Pellets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/d_factory/ZooKeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/creational_patterns/d_factory/ZooKeeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/encapsulating_data/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/encapsulating_data/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example2/Lion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example2/Lion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example3/DummyRaceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example3/DummyRaceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/FindMatchingAnimals.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/FindMatchingAnimals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/MainFuncInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/MainFuncInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/Polymorphism/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/Polymorphism/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/Skip.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/example4_functional_interfaces/Skip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/has_a_relationship/readme" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/has_a_relationship/readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/is_a_relationship/readme" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter2_design_patterns/is_a_relationship/readme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/collections/QueueCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/collections/QueueCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/collections/SetCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/collections/SetCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/comparable/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/comparable/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/comparable/DuckComparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/comparable/DuckComparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/generics/MainGenerics.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/generics/MainGenerics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/generics/ShippableZebraCrate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/generics/ShippableZebraCrate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/java8_additions/J8Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter3/java8_additions/J8Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/StreamMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/StreamMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/StreamMain2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/StreamMain2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/clases/NewWaySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/clases/NewWaySearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/functional/interfaces/FunctionType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/functional/interfaces/FunctionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/functional/interfaces/SupplierMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter4/functional/interfaces/SupplierMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter5/dates_and_times/CreatingMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter5/dates_and_times/CreatingMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter6/CatchExceptionExamples.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter6/CatchExceptionExamples.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter6/StuckTurkeyCage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter6/StuckTurkeyCage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/Concurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/Concurrency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/LionPenManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/LionPenManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/WeighAnimalAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/WeighAnimalAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_1_Runnable/CalculateAverage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_1_Runnable/CalculateAverage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_2_CreateingAThread/PrintDataExtendThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_2_CreateingAThread/PrintDataExtendThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_3_pollingWithSleep/CheckResultsV1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_3_pollingWithSleep/CheckResultsV1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_3_pollingWithSleep/CheckResultsV2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_3_pollingWithSleep/CheckResultsV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_4_CreateThreadUsingExecutorService/CheckResultsFuture.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_4_CreateThreadUsingExecutorService/CheckResultsFuture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_4_CreateThreadUsingExecutorService/zooInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_4_CreateThreadUsingExecutorService/zooInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_5_Callable/AddData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_5_Callable/AddData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_5_Callable/MiCallable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_5_Callable/MiCallable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_6_synchronizing/SheepManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_6_synchronizing/SheepManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_6_synchronizing/SheepManagerV3.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_6_synchronizing/SheepManagerV3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_6_synchronizing/SheepManagerV4.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_6_synchronizing/SheepManagerV4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/ConcurrentClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/ConcurrentClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/ForkJoinAndRecursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/ForkJoinAndRecursion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/ManagingConcurrentProcesses.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/ManagingConcurrentProcesses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/ParallelClasses.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/ParallelClasses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/PerformanceImprovement.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/PerformanceImprovement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/Reductions.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/Reductions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/StateLessVsStateFul.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_7_concurrentCollections/StateLessVsStateFul.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_8_Liveness/Deadlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_8_Liveness/Deadlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_8_Liveness/Livelock.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_8_Liveness/Livelock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_8_Liveness/Starvation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/chapter7/_8_Liveness/Starvation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/data_structure/MainDataStructure.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/data_structure/MainDataStructure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/Palindrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/StringExcercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/StringExcercise.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/example1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../chapters-study/src/main/java/co/book/exercises/example1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sorting-algorithms/com/examples/MainMySortExample.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sorting-algorithms/com/examples/MainMySortExample.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/sorting-algorithms/com/examples/SortingTest1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/sorting-algorithms/com/examples/SortingTest1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/examples/SortingTest1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/examples/SortingTest1.java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,31 +105,86 @@
   </component>
   <component name="ProjectId" id="1UTtpr0Yq1ESFvHfPkHt7xWUYrL" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tdd_examples/build.gradle" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BinaryTree">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AThread" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.concurrency.AThread" />
+      <module name="sorting-algorithms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.concurrency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BRunnable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.concurrency.BRunnable" />
+      <module name="sorting-algorithms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.concurrency.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.trees.BinaryTree" />
+      <module name="sorting-algorithms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.trees.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainMySortExample" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.examples.MainMySortExample" />
+      <module name="sorting-algorithms" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.examples.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MergeSort" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.examples.MergeSort" />
       <module name="sorting-algorithms" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -102,6 +230,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinaryTree" />
+        <item itemvalue="Application.BRunnable" />
+        <item itemvalue="Application.AThread" />
+        <item itemvalue="Application.MergeSort" />
         <item itemvalue="Application.MainMySortExample" />
       </list>
     </recent_temporary>
@@ -111,6 +243,7 @@
       <projects_view />
     </option>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -129,21 +262,65 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/examples/SortingTest1.java</url>
-          <line>121</line>
+          <line>119</line>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>28</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/examples/MergeSort.java</url>
+          <line>82</line>
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
