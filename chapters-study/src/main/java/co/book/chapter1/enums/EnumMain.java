@@ -9,7 +9,7 @@ public class EnumMain {
 
 
         /**
-         * Provee un array paa incluirlo enun loop por ejemplo
+         * Provee un array para incluirlo enum loop por ejemplo
          */
         System.out.println("For throught an enum");
         for(Season season: Season.values()) {

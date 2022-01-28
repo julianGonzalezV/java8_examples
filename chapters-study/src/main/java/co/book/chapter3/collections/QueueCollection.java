@@ -6,8 +6,9 @@ import java.util.Queue;
 
 /**
  * ::::::::::Queue Interface ::::::::::::::::::::
- * Use a queue when elements are added and removed in a specific order
- * Unless stated otherwise, a queue is assumed to be FIFO (first-in, first-out).The other common format is LIFO (last-in, first-out.)
+ * Elements in Queue will be added from the rear(back part) end while removed from the front.
+ * Unless stated otherwise, a queue is assumed to be FIFO (first-in, first-out).
+ * The other common format is LIFO (last-in, first-out.)
  *add, and remove from the beginning and end of the list in constant time.
  * The tradeoff is that dealing with an arbitrary index takes linear time.
  *

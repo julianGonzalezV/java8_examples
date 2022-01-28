@@ -37,7 +37,7 @@ public class ConcurrentClasses {
      * al hacer System.out.print(item+" "); dentro del for muestra solo los elementos originales de la
      * lista INTERESANTE PARA TEMAS DE CONCURRENCIA
      *
-     * CopyOnWriteArrayList: Cada vez que existe una operacion de added, modifi ed, or removed
+     * CopyOnWriteArrayList: Cada vez que existe una operacion de added, modified, or removed
      * tooodos los elementos se copian en una nueva estructura
      *
      * @param LInput
@@ -102,9 +102,9 @@ public class ConcurrentClasses {
 
     public static void main(String ... args){
 
-        ConcurrentHMap();
+        /*ConcurrentHMap();
         ConcurrentLinkedQ();
-        ConcurrentLinkedDeq();
+        ConcurrentLinkedDeq();*/
         /*
         Note como saca error de UnsupportedOperationException
          */

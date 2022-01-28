@@ -27,8 +27,8 @@ public class VisitorTicketTracker {
             /**
              * Por que NO ES  THREAD-SAFE??
              * 1) En la linea 10 no es final como si lo hace HayStorage : private static final HayStorage instance = new HayStorage();
-             * por lo cual se crea una vez se cargue la clase y no es posible modificarse, here NO ES FINAL PRECISAMENTE POR E
-             * VALIDACION de si es null entoncdes retorne un new
+             * por lo cual se crea una vez se cargue la clase y no es posible modificarse, here NO ES FINAL PRECISAMENTE
+             * POR VALIDACION de si es null entonces retorne un new (poderlo reasignar)
              *
              * 2) Imagine 2 hilos accediendo a la misma vez y solicitando getInstance, pues se crearan 2 a la misma vez
              * y todo lo que pase de alli en adelante es inseguro a nivel de concurrencia
@@ -72,6 +72,13 @@ public class VisitorTicketTracker {
      * SE CREE YA SE CUENTA CON LA INSTANCIA
      * volatile LO QUE hace es prevents a subtle case where the compiler tries to optimize the code such that
      that the object is accessed before it is finished being constructed.
+
+     VOLATILE: eN VARIABLES O METODOS HACE QUE LAS OPERACIOENS SOBRE ESTOS SEAN ATOMICAS, ES DECIR THREAD SAFE
+     Y ANTE UN GET DEL VALOR ASGURA QEU SIEMPRE DEVOVERÀ THE LAST ASSIGNED VALUE, NOTE QUE EN ESTE CASO
+     AL HACER EL GET INSTANCE ENTONCES PUEDE PASAR LAS SGTES 2 COSAS:
+     1 que no exista: En ese caso bloquea el acceso al recurso pro otro hilo mientras crea la instancia songleton
+     2 Que si exista: En ese caso devuelve el ultimo valor QUE SERIAL LA INSTANCIA y no bloquea como silo hace siempre
+     el metodo en la linea 56 (ademas esa misma linea 56 bloquea 2 veces cuando la instancia no existe)
      * @return
      */
     private static volatile VisitorTicketTracker instance2;

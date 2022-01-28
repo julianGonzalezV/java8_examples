@@ -7,7 +7,8 @@ import java.util.Stack;
 import java.util.stream.Collectors;
 
 /**
- * Subclass de vector(set con sincronizacion a la antigual) peeero es una synchronize implementation , synchronization is not always needed
+ * Subclass de vector(set con synchronization a la antigua) pero es una synchronize implementation , but
+ * synchronization is not always needed
  * in that case use ArrayDeque
  */
 public class StackCollection {
@@ -15,7 +16,7 @@ public class StackCollection {
     public static Stack eg1(){
         System.out.println("ADDING AND SEARCH::::::::::::::");
         Stack<Integer> intStack = new Stack<>();
-        intStack.push(1);// push retunrs the inserted element while add returns the result of the operation
+        intStack.push(1);// push returns the inserted element while add returns the result of the operation
         intStack.addAll(Arrays.asList( 6, 7)); // adding multiple records at once
         System.out.println(intStack.peek()); // obtener el ultimo registro insertado pero sin eliminaro
         System.out.println(intStack.pop()); // obtener el ultimo registro insertado Y LO ELIMINA
@@ -103,12 +104,13 @@ public class StackCollection {
     }
 
     public static void main(String... args){
-        eg1();
+        /*eg1();
         eg2();
         filterRemove();
         eg3();
+        streamEg();*/
         iterateEg();
-        streamEg();
+
 
     }
 }

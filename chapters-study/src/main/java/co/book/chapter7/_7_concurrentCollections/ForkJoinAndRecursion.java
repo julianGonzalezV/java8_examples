@@ -7,6 +7,23 @@ import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveAction;
 import java.util.concurrent.RecursiveTask;
 
+/**
+ * Applying the Fork/Join Framework:::::::::::::
+ *
+ * When a task gets too complicated, we can split the task
+ * into multiple other tasks using the fork/join framework.
+ *
+ * The fork/join framework relies on the concept of recursion to solve complex tasks.
+ * Recursion is the process by which a task calls itself to solve a problem. A recursive
+ * solution is constructed with a base case and a recursive case:
+ * Base case: A non-recursive method that is used to terminate the recursive path
+ *
+ *
+ * Applying the fork/join framework requires us to perform three steps:
+ * 1. Create a ForkJoinTask.---MOST difficult step
+ * 2. Create the ForkJoinPool.
+ * 3. Start the ForkJoinTask
+ */
 public class ForkJoinAndRecursion {
 
     /**
@@ -27,7 +44,7 @@ public class ForkJoinAndRecursion {
     /**
      *
      * @param weights: Note como en el primer llamado weigths es un array con puros ceros.,
-     *               no hay pesos caculados o realizados
+     *               no hay pesos calculados o realizados
      */
     static void forkJoin(Double[] weights){
         System.out.println("Animales que se deben pesar: "+weights.length);
@@ -86,7 +103,7 @@ public class ForkJoinAndRecursion {
          Animal Weighed: 9
          */
 
-        forkJoinCarrryingValue(new Double[10]);
+        //forkJoinCarrryingValue(new Double[10]);
 
 
     }
@@ -94,8 +111,11 @@ public class ForkJoinAndRecursion {
 }
 
 /**
- * Versoin que hace uso del método cmpute de la clase RecursiveAction o mas bien de fork jpin
+ * Versoin que hace uso del método compute de la clase RecursiveAction o mas bien de fork join
  * que es la que hereda RecursiveAction
+ *
+ * NOTA: TAMBIEN PUEDE EXTENDER DE RecursiveTask Class EN EL CASO EN QUE NECESITE QUE EL compute() method
+ * devuelva el resultado de la operacion ---un SIMIL ENTRE RUNNABLE AND CALLABLE
  */
 class WeighAnimalAction extends RecursiveAction {
     private int start;

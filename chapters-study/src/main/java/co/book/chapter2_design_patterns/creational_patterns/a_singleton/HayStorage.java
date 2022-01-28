@@ -32,7 +32,7 @@ public class HayStorage {
     }
 
     /**
-     * synchronized para eviater que 2 o mas procesos correan el mismo método al mismo tiempo
+     * synchronized para evitar que 2 o mas procesos correan el mismo método al mismo tiempo
      *  RECORDAR QUE EN LA LITERATURA ESO ES CONSIDERADO BLOQUEANTE
      * @param amount
      */

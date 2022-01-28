@@ -1,19 +1,23 @@
 package co.book.chapter3.collections;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import co.book.chapter3.comparable.Duck;
+
+import java.util.*;
 
 /**
+ * ALLOW DUPLICATED ITEMS
+ *
  * Using ArrayList allow You  look up any element in constant time
  Adding or removing an element is slower than accessing an element
  good choice when you are reading more often
  summary:
 
- Search --> O(1)
+ ::::::::Performance::::::::
+ Search --> O(1): Maybe a binary search algorithm is used
  Insert --> O(n)
  Remove --> O(n)
 
+ Sort: It uses Quick sort algorithm  O(n log n)  BUT the worst case is O(n^2)
 
  */
 public class ListCollection {
@@ -39,6 +43,41 @@ public class ListCollection {
         list.add(10);
         list.add(77);
         list.add(8);
+        return list;
+    }
+
+    private static List listNumbersSort(){
+        List<Integer> list = new ArrayList<>();
+        list.add(77);
+        list.add(10);
+        list.add(77);
+        list.add(8);
+        list.sort(null);
+        return list;
+    }
+
+    private static List listNumbersSortReverser(){
+        List<Integer> list = new ArrayList<>();
+        list.add(77);
+        list.add(10);
+        list.add(77);
+        list.add(8);
+        list.sort(Collections.reverseOrder());
+        return list;
+    }
+
+    private static List listNumbersCustomSort(){
+        Comparator<Integer> byEven = (x, y) -> {
+          if(x % 2 > 0) return 1;
+          else return -1;
+        };
+
+        List<Integer> list = new ArrayList<>();
+        list.add(77);
+        list.add(10);
+        list.add(77);
+        list.add(8);
+        list.sort(byEven);
         return list;
     }
 
@@ -99,5 +138,9 @@ public class ListCollection {
          */
         System.out.println("Strings: "+listZoo());
         System.out.println("Numbers: "+ listNumbers()); // again, It sorts based on the inserted order
+        System.out.println("Sorting :::::");
+        System.out.println("Natural: "+ listNumbersSort());
+        System.out.println("Custom Sort: "+listNumbersCustomSort());
+
     }
 }
