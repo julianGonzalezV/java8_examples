@@ -1,5 +1,6 @@
 package co.book.chapter4.functional.interfaces;
 
+import co.book.java8.chapter4.functional.interfaces.FunctionType;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

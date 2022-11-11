@@ -1,5 +1,6 @@
 package co.book.chapter7;
 
+import co.book.java8.chapter7.Concurrency;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
