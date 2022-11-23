@@ -30,7 +30,7 @@ public class SortAlgos {
      * Given 8>6 							then swap from [2,10,8,6]to [2,6,8,6]
      * 1				[2,*10,8,6]				6
      *
-     *:::::::::::::COMPLEXITY O(n square):::::::::::
+     *:::::::::::::COMPLEXITY O(n square)-VERY INEFFICIENT:::::::::::
      * @return
      */
     public static int[] bubbleSort( int[]  unsortedArr){
@@ -62,7 +62,7 @@ public class SortAlgos {
     /**
      * Call selection because every time (inner for) we select the smallest number
      * @param unsortedArr
-     * :::::::::::::COMPLEXITY O(n square):::::::::::
+     * :::::::::::::COMPLEXITY O(n square)-Better than bubble sort given it is independent of elements order:::::::::::
      * @return
      */
     public static int[] selectionSortMyVersion(int[] unsortedArr){
@@ -88,7 +88,7 @@ public class SortAlgos {
      * Description: On each iteration it gets the smaller element and swap it to the current pivot
      * Final Version of previous one Line68
      * @param unsortedArr
-     * :::::::::::::COMPLEXITY O(n square):::::::::::
+     * :::::::::::::COMPLEXITY O(n square)-Better than bubble sort given it is independent of elements order:::::::::::
      * @return
      */
     public static int[] selectionSort(int[] unsortedArr){
@@ -109,6 +109,7 @@ public class SortAlgos {
 
 
     /**
+     * My Version :) previous to see online versions
      * How does it work?
      * Example input:   [10, 2, 8, 6, 7, 3]
      * Expected Output: [2, 3, 6, 7, 8, 10]
@@ -121,6 +122,8 @@ public class SortAlgos {
      *  3 -       [2, 6, 8, 10, 7, 3] --> 6 is lower than 8  so swap,6 is greater than 2 so let's continue with 7
      *  4 -       ...
      * @param unsortedArr
+     * @complexity O(n square) Better than bubble sort and selection Sort
+     * Relatively good for partially sorted lists (the complexity is reduce to almost linear O(n))
      * @return
      */
     public static int[] insertionSort(int[] unsortedArr){
@@ -139,9 +142,28 @@ public class SortAlgos {
         return unsortedArr;
     }
 
+    /**
+     * Online version
+     * @param unsortedArr
+     * @return
+     */
+    public static int[] insertionSortV2(int[] unsortedArr){
+        for(int i = 0; i < unsortedArr.length; i++){
+            int bucket = unsortedArr[i];
+            int j = i -1;
+            // this comparison unsortedArr[j]>bucket() makes the sort stable (no elements are moved if they are equal)
+            while (j >= 0 && unsortedArr[j]>bucket) {
+                unsortedArr[j+1] = unsortedArr[j];
+                j--;
+            }
+            unsortedArr[j+1] = bucket;
+        }
+        return unsortedArr;
+    }
+
     public static void main(String ... args) {
        //Arrays.stream(bubbleSort( new int[]{10,2,8,6,7,3})).forEach(System.out::println);
-        Arrays.stream(insertionSort( new int[]{10,2,8,6,7,9,3,4,1,0,5})).forEach(System.out::println);
+       // Arrays.stream(insertionSort( new int[]{10,2,8,6,7,9,3,4,1,0,5})).forEach(System.out::println);
         //Arrays.stream(selectionSort( new int[]{10,8,7,6})).forEach(System.out::println);
        // Arrays.stream(selectionSort( new int[]{1,0})).forEach(System.out::println);
         //Arrays.stream(insertionSort( new int[]{0,1,2})).forEach(System.out::println);
@@ -152,5 +174,9 @@ public class SortAlgos {
         //Arrays.stream(insertionSort( new int[]{2,10,8,6})).forEach(System.out::println);
 
         //Arrays.stream(insertionSort( new int[]{2,1,0})).forEach(System.out::println);
+
+        Arrays.stream(insertionSort( new int[]{10,2,8,6,7,9,3,4,1,0,5})).forEach(System.out::println);
+        System.out.println("Course Version:");
+        Arrays.stream(insertionSortV2( new int[]{10,2,8,6,7,9,3,4,1,0,5})).forEach(System.out::println);
     }
 }
