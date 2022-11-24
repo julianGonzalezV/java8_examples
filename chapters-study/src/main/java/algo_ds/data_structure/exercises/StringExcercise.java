@@ -64,7 +64,7 @@ public class StringExcercise {
         List<String> inputList = new ArrayList<>(Arrays.asList(inputStr.split(" ")));
         String[] fullStrs = fullStr.split(" ");
         for(int i = 0; i<fullStrs.length; i++){ // O(n)
-            if(inputList.contains(fullStrs[i])){ // Contains is O(n) it is implemented on indesOf()
+            if(inputList.contains(fullStrs[i])){ // Contains is O(n) it is implemented on indexOf()
                 inputList.remove(fullStrs[i]);
             }
         }//Then O(n exp 2)
