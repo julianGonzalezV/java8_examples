@@ -1,7 +1,5 @@
 package algo_ds.data_structure.exercises.bynary;
 
-import java.util.logging.Logger;
-
 /**
  *
  * :::::::::I- Logical bit shift:::::::::

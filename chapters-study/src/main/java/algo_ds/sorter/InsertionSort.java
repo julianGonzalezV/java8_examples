@@ -17,8 +17,8 @@ public class InsertionSort extends SortAlgorithm{
      *  3 -       [2, 6, 8, 10, 7, 3] --> 6 is lower than 8  so swap,6 is greater than 2 so let's continue with 7
      *  4 -       ...
      * @param unsortedArr
-     * @complexity O(n square) Better than bubble sort and selection Sort
-     * Relatively good for partially sorted lists (the complexity is reduce to almost linear O(n))
+     * @complexity O(n square) Better than <<bubble sort>> and <<selection Sort>>
+     * Relatively good for partially sorted lists (in those cases the complexity is reduced to almost linear O(n))
      * @return
      */
     @Override

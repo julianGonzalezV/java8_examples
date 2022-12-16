@@ -66,7 +66,7 @@ public class AnimalBuilder {
 
 
         /**
-         * No es necesario almacekar la instancia de builder como en el anterior AnimalBuilder duckBuilder = ...
+         * No es necesario almacenar la instancia de builder como en el anterior AnimalBuilder duckBuilder = ...
          * sino que de una vamos y obtenemos el imutable Animal
          */
         Animal flamingo = new AnimalBuilder()

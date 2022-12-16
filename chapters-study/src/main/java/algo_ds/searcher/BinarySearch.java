@@ -1,6 +1,6 @@
-package algo_ds.session1_intro;
+package algo_ds.searcher;
 
-public class BinarySearch extends SearchAlgorithm{
+public class BinarySearch extends SearchAlgorithm {
     @Override
     /**
      * It uses te Divide and Conquer Strategy
