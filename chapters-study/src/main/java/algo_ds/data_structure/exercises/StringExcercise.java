@@ -85,6 +85,15 @@ public class StringExcercise {
     }*/
 
 
+    public static void stringBulderSample(){
+        StringBuilder builder = new StringBuilder("abc");
+        builder.append("def");
+        builder.append("ghij");
+        builder.insert(0, "xyz");
+        builder.delete(3,6);
+        System.out.println(builder.toString());
+    }
+
 
     public static void main(String ... args){
         /*System.out.println(reverse("love"));
@@ -96,6 +105,7 @@ public class StringExcercise {
         System.out.println(half("microsoft", false));
         System.out.println(halfAndReverse("microsoft"));
         System.out.println(reverseByBytes("loveyou"));*/
-        System.out.println(isRansomWord("love you", "love to you"));
+        //System.out.println(isRansomWord("love you", "love to you"));
+        stringBulderSample();
     }
 }

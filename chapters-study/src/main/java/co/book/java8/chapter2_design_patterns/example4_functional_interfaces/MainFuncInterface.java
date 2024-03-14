@@ -5,7 +5,7 @@ import co.book.java8.chapter2_design_patterns.example3.Animal;
 public class MainFuncInterface {
 
     public static void main(String[] args) {
-        //int a = 0; si colocamos esta emtpmces los labda expression van a fallar debido a no puede estar declarada
+        //int a = 0; //si colocamos esta entonces los lambda expression van a fallar debido a no puede estar declarada
         FindMatchingAnimals.print(new Animal("fish", false, true), a -> a.canHop());
         //no imprime nada porque hopper es false
         FindMatchingAnimals.print(new Animal("kangaroo", true, false), a -> a.canHop());

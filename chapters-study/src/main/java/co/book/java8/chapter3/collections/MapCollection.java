@@ -18,7 +18,7 @@ import java.util.stream.Stream;
  *The tradeoff is that you lose the order in which you inserted the elements
  *
  * 2) :::::::::::LinkedHashMap
- * much like HashMap but you DON'T lose the order in which you inserted the elements (insertion-order)
+ * much like HashMap, but you DON'T lose the order in which you inserted the elements (insertion-order)
  *
  *
  * 3) :::::::TreeMap::::::

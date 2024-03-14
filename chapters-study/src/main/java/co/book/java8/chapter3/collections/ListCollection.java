@@ -15,7 +15,7 @@ import java.util.*;
  Insert --> O(n)
  Remove --> O(n)
 
- Sort: It uses Quick sort algorithm  O(n log n)  BUT the worst case is O(n^2)
+ Sort: It uses MergeSort algorithm, so it runs at O(n log n)
 
  */
 public class ListCollection {
@@ -95,7 +95,7 @@ public class ListCollection {
         List<String> list = new ArrayList<>();
         System.out.println(list.add("Sparrow")); // true si se insertó bien
         System.out.println(list.add("Sparrow")); // true
-        System.out.println(list); // permite repetidos [Sparrow, Sparrow]
+        System.out.println(list); // allows repeated values [Sparrow, Sparrow]
 
 
         /**

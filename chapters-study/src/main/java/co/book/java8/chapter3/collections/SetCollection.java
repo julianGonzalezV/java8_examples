@@ -9,17 +9,16 @@ import java.util.TreeSet;
  * You use a set when you don’t want to allow duplicate entries.
  * Implementations
  * :::::::::1) HashSet:::::::::::::::
- HashSet--El que se usa comúnmente
+ HashSet--> It's the most commonly used
  Search --> O(1)
  Insert --> O(1)
  Remove --> O(1)
  tradeoff---> Loose of order when inserting
- *HashSet is the most common used set.
  * :::::::::::::::::::::::::::::::::::::
 
  * :::::::::2) TreeSet:::::::::::::::
- *stores its elements in a sorted tree structure.
- * the set is always in sorted order. ( elimina el tradeoff de hashSet )
+ * Stores its elements in a sorted tree structure.
+ * the set is always in sorted order. ( get rid of the tradeoff of hashSet )
  * The tradeoff is that adding and checking if an element is present
  are both O(log n).
  */
